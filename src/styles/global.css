@@ -40,6 +40,6 @@
   --color-white: #fafafa;
   --color-gray-text: #d9d9d9;
   --color-dark-gray-text: #414141;
-  --color-black-line: rgba(0, 0, 0, 0.4);
-  --color-white-line: rgba(255, 255, 255, 0.4);
+  --color-black-line: #000000;
+  --color-white-line: #ffffff;
 }
