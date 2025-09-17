@@ -1,40 +1,69 @@
 ---
-import { Shield } from "@lucide/astro";
+import { Key, Map, PanelsTopLeft, PenTool, Shield, Users } from "@lucide/astro";
 const cards = [
   {
     icon: Shield,
     title: "Built to Last",
     desc: "Websites made with clean code, strong performance, and scalability in mind. They serve your business for years, not months.",
   },
+  {
+    icon: PenTool,
+    title: "Craft Over Shortcuts",
+    desc: "No templates, no quick fixes. Every project is designed and developed properly, with care and attention to detail.",
+  },
+  {
+    icon: Map,
+    title: "Transparent Process",
+    desc: "Everything is clear from day one: contract, scope, and fees. You always know where we stand.",
+  },
+  {
+    icon: PanelsTopLeft,
+    title: "Full Visibility",
+    desc: "You can follow the entire process in real time in a Notion document. Tasks, timelines, and progress all in one place.",
+  },
+  {
+    icon: Key,
+    title: "100% Yours",
+    desc: "When we launch, you own everything: the code, the content, and the hosting. No lock-ins.",
+  },
+  {
+    icon: Users,
+    title: "Partnership",
+    desc: "I value lasting relationships. You get support and guidance beyond launch, not just a quick hand-off.",
+  },
 ];
 ---
 
-<div class="flex flex-col mx-auto max-w-7xl px-3 md:px-6 lg:px-8 items-center">
+<div class="section-wrapper">
   <section
     id="HowIWork"
-    class="flex flex-col w-full items-center border-x border-white-line/40"
+    class="flex flex-col w-full items-center border-x border-white-line"
   >
     <header
-      class="flex w-full mt-16 md:mt-24 lg:mt-32 py-12 px-6 md:p-16 lg:p-24 border-y border-white-line/40"
+      class="section-header section-margin-top border-y border-white-line"
     >
       <h2
         class="mx-auto font-bold text-3xl lg:text-5xl xl:text-6xl text-center text-shadow-header-black"
       >
-        Core Values. Manifest
+        My Core Values
       </h2>
     </header>
 
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grids-cols-3 w-full mb-16 md:mb-24 lg:mb-32 border-b border-white-line/40"
+      class="section-margin-bottom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full p-6 md:p-8 gap-6 md:gap-8 border-b border-white-line"
     >
       {
         cards.map((c) => (
-          <article class={`flex flex-col p-4 lg:p-6 gap-4 xl:gap-6`}>
-            <c.icon />
-            <h3 class={`font-bold text-2xl lg:text-3xl xl:text-4xl`}>
-              {c.title}
-            </h3>
-            <p class={`italic xl:text-xl`}>{c.desc}</p>
+          <article
+            class={`flex flex-col p-5 xl:p-6 gap-3 lg:gap-4 xl:gap-5 rounded-xl border-2 border-white-line`}
+          >
+            <header class="flex items-center gap-3 xl:gap-4">
+              <c.icon class="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8" />
+              <h3 class={`font-bold text-xl xl:text-2xl`}>
+                {c.title}
+              </h3>
+            </header>
+            <p class={`text-gray-text`}>{c.desc}</p>
           </article>
         ))
       }
