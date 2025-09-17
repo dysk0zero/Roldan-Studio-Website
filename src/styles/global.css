@@ -1,34 +1,59 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Montserrat";
-  src: url("/fonts/Montserrat.woff2") format("woff2-variations");
-  font-weight: 100 900;
-  font-style: normal;
   font-display: swap;
-}
-@font-face {
   font-family: "Montserrat";
-  src: url("/fonts/Montserrat-Italic.woff2") format("woff2-variations");
-  font-weight: 100 900;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v31-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
   font-style: italic;
-  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/montserrat-v31-latin-italic.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("/fonts/poppins-semibold.woff2") format("woff2");
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/montserrat-v31-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
   font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+  src: url("../fonts/montserrat-v31-latin-600.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/jetbrainsmono.woff2") format("woff2-variations");
-  font-weight: 100 900;
-  font-style: normal;
   font-display: swap;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/montserrat-v31-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/poppins-v23-latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "JetBrains Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/jetbrains-mono-v24-latin-regular.woff2") format("woff2");
 }
 
 @theme {
@@ -42,7 +67,6 @@
 
   --text-5xl: 2.5rem;
   --text-6xl: 3rem;
-  
 
   --color-black: #242b2f;
   --color-white: #fafafa;
@@ -51,7 +75,7 @@
   --color-black-line: #000000;
   --color-white-line: #ffffff;
 
-  --text-shadow-header-black: -4px -4px 4px rgb(145 145 145 / 0.60);
+  --text-shadow-header-black: -4px -4px 4px rgb(145 145 145 / 0.6);
   --text-shadow-yellow: 4px 4px 4px rgb(219 255 0 / 0.3);
   --text-shadow-blue: 4px 4px 4px rgb(54 208 218 / 0.3);
   --text-shadow-pink: 4px 4px 4px rgb(228 147 205 / 0.3);
