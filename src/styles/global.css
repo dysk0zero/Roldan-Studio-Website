@@ -32,9 +32,17 @@
 }
 
 @theme {
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1440px;
+
   --font-sans: "Montserrat", system-ui, sans-serif;
   --font-logo: "Poppins", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+
+  --text-5xl: 2.5rem;
+  --text-6xl: 3rem;
+  
 
   --color-black: #242b2f;
   --color-white: #fafafa;
@@ -42,4 +50,10 @@
   --color-dark-gray-text: #414141;
   --color-black-line: #000000;
   --color-white-line: #ffffff;
+
+  --text-shadow-header-black: -4px -4px 4px rgb(145 145 145 / 0.60);
+  --text-shadow-yellow: 4px 4px 4px rgb(219 255 0 / 0.3);
+  --text-shadow-blue: 4px 4px 4px rgb(54 208 218 / 0.3);
+  --text-shadow-pink: 4px 4px 4px rgb(228 147 205 / 0.3);
+  --text-shadow-green: 4px 4px 4px rgb(106 237 94 / 0.3);
 }
