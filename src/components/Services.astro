@@ -1,17 +1,283 @@
 ---
+import Webflow from "../assets/webflow.svg";
+import {
+  Rocket,
+  Gauge,
+  PiggyBank,
+  Wrench,
+  Files,
+  Palette,
+  PenTool,
+  Search,
+  Database,
+  ShoppingCart,
+  FileText,
+  FramerIcon,
+  Settings,
+  Layers,
+  ShieldCheck,
+  ArrowUpRight,
+  ChartColumn,
+  Pencil,
+  Route,
+  Headset,
+  CodeXml,
+  LayoutDashboard,
+} from "@lucide/astro";
+
+const staticOutcomes = [
+  { icon: Rocket, text: "Launch fast." },
+  { icon: Gauge, text: "Great speed and SEO." },
+  { icon: PiggyBank, text: "Low monthly cost." },
+  { icon: Wrench, text: "I handle updates on request. You don't touch code." },
+  { icon: ArrowUpRight, text: "Option to upgrade later to a dynamic site." },
+];
+
+const staticFeatures = [
+  { icon: Files, text: "Up to 5 pages" },
+  { icon: Palette, text: "Basic styleguide" },
+  { icon: PenTool, text: "Full design" },
+  { icon: Route, text: "User-flow diagrams" },
+  { icon: Search, text: "Basic SEO strategy" },
+  { icon: ChartColumn, text: "Analytics & domain setup" },
+  { icon: Headset, text: "Real-time project updates" },
+];
+
+const staticDev = [
+  { icon: FramerIcon, text: "Framer Development" },
+  { icon: Webflow, text: "Webflow Development" },
+  { icon: CodeXml, text: "Full code" },
+];
+
+const dynamicOutcomes = [
+  { icon: Pencil, text: "Update and edit the content yourself." },
+  { icon: Gauge, text: "Great speed and SEO." },
+  { icon: FileText, text: "Add a blog or pages showcasing your work." },
+  { icon: Database, text: "Keep all your content organized in one database." },
+  { icon: ShoppingCart, text: "Sell products on your site." },
+];
+
+const dynamicFeatures = [
+  { icon: Database, text: "CMS" },
+  { icon: ShoppingCart, text: "E-commerce" },
+  { icon: Files, text: "Unlimited pages" },
+  { icon: Palette, text: "Basic styleguide" },
+  { icon: PenTool, text: "Full design" },
+  { icon: Route, text: "User-flow diagrams" },
+  { icon: Search, text: "Basic SEO strategy" },
+  { icon: ChartColumn, text: "Analytics & domain setup" },
+  { icon: Headset, text: "Real-time project updates" },
+];
+
+const dynamicDev = [
+  { icon: Webflow, text: "Webflow Development" },
+  { icon: CodeXml, text: "Full code" },
+];
+
+const customOutcomes = [
+  {
+    icon: Settings,
+    text: "Full control of features, logic, and integrations.",
+  },
+  {
+    icon: Layers,
+    text: "Scales to thousands of products, users, or data points.",
+  },
+  {
+    icon: ShieldCheck,
+    text: "Secure infrastructure with auth, payments, and APIs.",
+  },
+  { icon: LayoutDashboard, text: "Custom workflows and dashboards for your team." },
+];
+
+const customDev = [{ icon: CodeXml, text: "Full code" }];
 ---
 
 <div class="bg-white w-full">
   <div class="section-wrapper text-black">
-    <section id="Services" class="flex flex-col w-full items-center border-x border-black-line">
-      <header>
-        <h2>Transparent Pricing in Every Quote</h2>
+    <section
+      id="Services"
+      class="flex flex-col w-full items-center border-x border-black-line"
+    >
+      <header
+        class="section-header section-margin-top border-y border-black-line"
+      >
+        <h2
+          class="mx-auto font-bold text-3xl lg:text-5xl xl:text-6xl text-center text-shadow-header-black"
+        >
+          Transparent Pricing in Every Quote
+        </h2>
       </header>
-      <article>
-        <header>
-          
-        </header>
-      </article>
+
+      <div
+        class="section-margin-bottom flex flex-col md:flex-row items-start w-full p-6 gap-6 xl:p-8 xl:gap-8 border-b border-black-line"
+      >
+        <article
+          class="flex flex-col items-start w-full p-6 gap-6 rounded-xl border border-black-line"
+        >
+          <header class="flex flex-col gap-3">
+            <h2 class="font-bold text-xl xl:text-2xl">Static Marketing Site</h2>
+            <p class="text-dark-gray-text">
+              The best option for simple sites that don't need monthly changes.
+            </p>
+          </header>
+          <a role="button" href="#contact" class="button-services w-full">
+            Let's begin!
+          </a>
+          <div class="flex w-full items-center gap-3 justify-between">
+            <hr class="flex-grow bg-black" />
+            <h3 class="text-sm font-medium text-dark-gray-text">Outcomes</h3>
+            <hr class="flex-grow bg-black" />
+          </div>
+          <ul class="flex flex-col gap-3">
+            {
+              staticOutcomes.map(({ icon: Icon, text }) => (
+                <li class="flex items-center gap-3">
+                  <Icon class="w-5 h-5 shrink-0" />
+                  <span>{text}</span>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="hidden md:flex w-full items-center gap-3 justify-between">
+            <hr class="flex-grow bg-black" />
+            <h3 class="text-sm font-medium text-dark-gray-text">Features</h3>
+            <hr class="flex-grow bg-black" />
+          </div>
+          <ul class="hidden md:flex md:flex-col gap-3">
+            {
+              staticFeatures.map(({ icon: Icon, text }) => (
+                <li class="flex items-center gap-3">
+                  <Icon class="w-5 h-5 shrink-0" />
+                  <span>{text}</span>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="flex w-full items-center gap-3 justify-between">
+            <hr class="flex-grow bg-black" />
+            <h3 class="text-sm font-medium text-dark-gray-text">
+              Development Options
+            </h3>
+            <hr class="flex-grow bg-black" />
+          </div>
+          <ul class="flex flex-col gap-3">
+            {
+              staticDev.map(({ icon: Icon, text }) => (
+                <li class="flex items-center gap-3">
+                  <Icon class="w-5 h-5 shrink-0" />
+                  <span>{text}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </article>
+                <article
+          class="flex flex-col items-start w-full p-6 gap-6 rounded-xl border border-black-line"
+        >
+          <header class="flex flex-col gap-3">
+            <h2 class="font-bold text-xl xl:text-2xl">Dynamic Marketing Site</h2>
+            <p class="text-dark-gray-text">
+              Perfect for content-heavy sites that need continuous changes or small stores.
+            </p>
+          </header>
+          <a role="button" href="#contact" class="button-services w-full">
+            Let's build!
+          </a>
+          <div class="flex w-full items-center gap-3 justify-between">
+            <hr class="flex-grow bg-black" />
+            <h3 class="text-sm font-medium text-dark-gray-text">Outcomes</h3>
+            <hr class="flex-grow bg-black" />
+          </div>
+          <ul class="flex flex-col gap-3">
+            {
+              dynamicOutcomes.map(({ icon: Icon, text }) => (
+                <li class="flex items-center gap-3">
+                  <Icon class="w-5 h-5 shrink-0" />
+                  <span>{text}</span>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="hidden md:flex w-full items-center gap-3 justify-between">
+            <hr class="flex-grow bg-black" />
+            <h3 class="text-sm font-medium text-dark-gray-text">Features</h3>
+            <hr class="flex-grow bg-black" />
+          </div>
+          <ul class="hidden md:flex md:flex-col gap-3">
+            {
+              dynamicFeatures.map(({ icon: Icon, text }) => (
+                <li class="flex items-center gap-3">
+                  <Icon class="w-5 h-5 shrink-0" />
+                  <span>{text}</span>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="flex w-full items-center gap-3 justify-between">
+            <hr class="flex-grow bg-black" />
+            <h3 class="text-sm font-medium text-dark-gray-text">
+              Development Options
+            </h3>
+            <hr class="flex-grow bg-black" />
+          </div>
+          <ul class="flex flex-col gap-3">
+            {
+              dynamicDev.map(({ icon: Icon, text }) => (
+                <li class="flex items-center gap-3">
+                  <Icon class="w-5 h-5 shrink-0" />
+                  <span>{text}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </article>
+                <article
+          class="flex flex-col items-start w-full p-6 gap-6 rounded-xl border border-black-line"
+        >
+          <header class="flex flex-col gap-3">
+            <h2 class="font-bold text-xl xl:text-2xl">Custom Project</h2>
+            <p class="text-dark-gray-text">
+              For development of complex web applications or big ecommerce sites.
+            </p>
+          </header>
+          <a role="button" href="#contact" class="button-services w-full">
+            Get a quote
+          </a>
+          <div class="flex w-full items-center gap-3 justify-between">
+            <hr class="flex-grow bg-black" />
+            <h3 class="text-sm font-medium text-dark-gray-text">Outcomes</h3>
+            <hr class="flex-grow bg-black" />
+          </div>
+          <ul class="flex flex-col gap-3">
+            {
+              customOutcomes.map(({ icon: Icon, text }) => (
+                <li class="flex items-center gap-3">
+                  <Icon class="w-5 h-5 shrink-0" />
+                  <span>{text}</span>
+                </li>
+              ))
+            }
+          </ul>
+          <div class="flex w-full items-center gap-3 justify-between">
+            <hr class="flex-grow bg-black" />
+            <h3 class="text-sm font-medium text-dark-gray-text">
+              Development Options
+            </h3>
+            <hr class="flex-grow bg-black" />
+          </div>
+          <ul class="flex flex-col gap-3">
+            {
+              customDev.map(({ icon: Icon, text }) => (
+                <li class="flex items-center gap-3">
+                  <Icon class="w-5 h-5 shrink-0" />
+                  <span>{text}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </article>
+      </div>
     </section>
   </div>
 </div>
