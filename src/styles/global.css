@@ -77,6 +77,7 @@
   --text-shadow-blue: 4px 4px 4px rgb(54 208 218 / 0.3);
   --text-shadow-pink: 4px 4px 4px rgb(228 147 205 / 0.3);
   --text-shadow-green: 4px 4px 4px rgb(106 237 94 / 0.3);
+  --text-shadow-violet: 4px 4px 4px rgb(128 0 100 / 0.6);
 }
 
 .section-wrapper {
