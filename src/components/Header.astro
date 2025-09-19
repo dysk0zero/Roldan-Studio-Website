@@ -3,7 +3,10 @@ import { ArrowRight } from "@lucide/astro";
 import Logo from "../assets/Logo.svg";
 ---
 
-<header id="site-header" class="dark-header w-full sticky top-0 z-50 backdrop-blur-md transition-colors duration-300">
+<header
+  id="site-header"
+  class="dark-header w-full sticky top-0 z-50 backdrop-blur-md transition-colors duration-300"
+>
   <div class="section-wrapper">
     <div class="flex w-full py-4 px-1 max-h-16 justify-between items-center">
       <a href="/" aria-label="Home" class="flex items-center">
@@ -12,34 +15,22 @@ import Logo from "../assets/Logo.svg";
       <nav class="hidden lg:flex w-full">
         <ul class="lg:flex list-none w-full justify-center gap-6">
           <li>
-            <a href="#WhatIDo" 
-              >what I do</a
-            >
+            <a href="#WhatIDo">what I do</a>
           </li>
           <li>
-            <a href="#HowIWork" 
-              >how I work</a
-            >
+            <a href="#HowIWork">how I work</a>
           </li>
           <li>
-            <a href="#Manifest" 
-              >manifest</a
-            >
+            <a href="#Manifest">manifest</a>
           </li>
           <li>
-            <a href="#Services" 
-              >services</a
-            >
+            <a href="#Services">services</a>
           </li>
           <li>
-            <a href="#Testimonies" 
-              >testimonies</a
-            >
+            <a href="#Testimonies">testimonies</a>
           </li>
           <li>
-            <a href="#Contact" 
-              >contact</a
-            >
+            <a href="#Contact">contact</a>
           </li>
         </ul>
       </nav>
@@ -85,7 +76,10 @@ import Logo from "../assets/Logo.svg";
             }
           });
         },
-        { threshold: 0.5 }
+        {
+          threshold: [0.2, 0.5],
+          rootMargin: `-${header.offsetHeight}px 0px 0px 0px`,
+        }
       );
 
       sections.forEach((s) => observer.observe(s));
