@@ -72,7 +72,7 @@
   --color-white-line: rgba(255, 255, 255, 0.4);
   --color-black-border: rgba(44, 44, 44, 1);
 
-  --text-shadow-header-black: -4px -4px 4px rgb(145 145 145 / 0.6);
+  --text-shadow-header-black: -4px -4px 4px rgb(125 125 125 / 0.5);
   --text-shadow-yellow: 4px 4px 4px rgb(177 204 0 / 0.3);
   --text-shadow-blue: 4px 4px 4px rgb(51 194 204 / 0.3);
   --text-shadow-pink: 4px 4px 4px rgb(204 131 183 / 0.3);
