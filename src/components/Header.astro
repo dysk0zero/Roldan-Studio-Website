@@ -51,8 +51,6 @@ import Logo from "../assets/Logo.svg";
     const header = document.getElementById("site-header");
     const sections = document.querySelectorAll(".light-bg, .dark-bg");
 
-    console.log("Found sections:", sections.length);
-
     if (header && sections.length) {
       const setMode = (isLight) => {
         header.classList.remove("light-header", "dark-header");
@@ -67,7 +65,10 @@ import Logo from "../assets/Logo.svg";
       });
       if (initial) setMode(initial.classList.contains("light-bg"));
 
-      // Observe sections
+      // Pick threshold depending on viewport width
+      const vw = window.innerWidth;
+      const threshold = vw < 1024 ? 0.2 : 0.45;
+
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -77,7 +78,7 @@ import Logo from "../assets/Logo.svg";
           });
         },
         {
-          threshold: [0.2, 0.5],
+          threshold,
           rootMargin: `-${header.offsetHeight}px 0px 0px 0px`,
         }
       );
@@ -86,3 +87,4 @@ import Logo from "../assets/Logo.svg";
     }
   });
 </script>
+
