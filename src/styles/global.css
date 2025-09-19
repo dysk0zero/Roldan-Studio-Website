@@ -73,11 +73,12 @@
   --color-black-border: rgba(44, 44, 44, 1);
 
   --text-shadow-header-black: -4px -4px 4px rgb(145 145 145 / 0.6);
-  --text-shadow-yellow: 4px 4px 4px rgb(219 255 0 / 0.3);
-  --text-shadow-blue: 4px 4px 4px rgb(54 208 218 / 0.3);
-  --text-shadow-pink: 4px 4px 4px rgb(228 147 205 / 0.3);
-  --text-shadow-green: 4px 4px 4px rgb(106 237 94 / 0.3);
+  --text-shadow-yellow: 4px 4px 4px rgb(177 204 0 / 0.3);
+  --text-shadow-blue: 4px 4px 4px rgb(51 194 204 / 0.3);
+  --text-shadow-pink: 4px 4px 4px rgb(204 131 183 / 0.3);
+  --text-shadow-green: 4px 4px 4px rgb(92 204 82 / 0.3);
   --text-shadow-violet: 4px 4px 4px rgb(128 0 100 / 0.6);
+  --text-shadow-golden: 4px 4px 4px rgb(111 128 0 / 0.6);
 }
 
 .section-wrapper {
