@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  color-scheme: dark;
-}
-
 @font-face {
   font-display: swap;
   font-family: "Montserrat";
@@ -70,7 +66,12 @@
   --color-dark-gray-text: #414141;
   --color-black-line: rgba(0, 0, 0, 0.4);
   --color-white-line: rgba(255, 255, 255, 0.4);
+
+  --color-black-hover: #2b3338;
+  --color-black-active: #3b3b4d;
   --color-black-border: rgba(44, 44, 44, 1);
+  --color-black-border-hover: rgba(55, 55, 55, 1);
+  --color-black-border-active: rgba(66, 66, 66, 1);
 
   --text-shadow-header-black: -4px -4px 4px rgb(125 125 125 / 0.5);
   --text-shadow-yellow: 4px 4px 4px rgb(177 204 0 / 0.3);
@@ -81,6 +82,72 @@
   --text-shadow-golden: 4px 4px 4px rgb(111 128 0 / 0.6);
 }
 
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html {
+    scroll-behavior: smooth;
+    background: linear-gradient(
+        250deg,
+        rgba(36, 41, 47, 0.2) 97.5%,
+        rgba(255, 208, 245, 0.05) 100%
+      ),
+      linear-gradient(
+        85deg,
+        rgba(36, 41, 47, 0.1) 95%,
+        rgba(255, 208, 245, 0.15) 100%
+      ),
+      #24292f;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 769px) {
+    html {
+      background: linear-gradient(
+          250deg,
+          rgba(36, 41, 47, 0.2) 95%,
+          rgba(255, 208, 245, 0.1) 100%
+        ),
+        linear-gradient(
+          85deg,
+          rgba(36, 41, 47, 0.1) 95%,
+          rgba(255, 208, 245, 0.15) 100%
+        ),
+        #24292f;
+      background-repeat: no-repeat;
+    }
+  }
+
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@layer components {
+  .section-wrapper {
+    @apply flex flex-col w-full mx-auto max-w-7xl px-3 md:px-6 lg:px-8 items-center;
+  }
+
+  .section-margin-top {
+    @apply mt-16 md:mt-24 lg:mt-32;
+  }
+
+  .section-margin-bottom {
+    @apply mb-16 md:mb-24 lg:mb-32;
+  }
+
+  .section-header {
+    @apply flex w-full py-12 px-6 md:p-16 lg:p-24;
+  }
+
+  .button-services {
+    @apply flex justify-center items-center p-2 bg-black hover:bg-black-hover active:bg-black-active text-white rounded-xl border border-black-border hover:border-black-border-hover active:border-black-border-active;
+  }
+}
+
 @layer utilities {
   .bg-custom {
     background: linear-gradient(
@@ -89,21 +156,4 @@
       rgba(255, 208, 245, 0.14) 100%
     );
   }
-}
-
-.section-wrapper {
-  @apply flex flex-col w-full mx-auto max-w-7xl px-3 md:px-6 lg:px-8 items-center;
-}
-.section-margin-top {
-  @apply mt-16 md:mt-24 lg:mt-32;
-}
-.section-margin-bottom {
-  @apply mb-16 md:mb-24 lg:mb-32;
-}
-.section-header {
-  @apply flex w-full py-12 px-6 md:p-16 lg:p-24;
-}
-
-.button-services {
-  @apply flex justify-center items-center p-2 bg-black text-white rounded-xl border border-black-border;
 }
