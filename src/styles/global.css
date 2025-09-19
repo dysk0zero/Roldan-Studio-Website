@@ -75,8 +75,8 @@
   --color-black-border-hover: rgba(55, 55, 55, 1);
   --color-black-border-active: rgba(66, 66, 66, 1);
 
-  --color-offwhite: #F0F5FF;
-  --color-white-blue: #E6F8FF;
+  --color-offwhite: #F5FAFF;
+  --color-white-blue: #F0F8FF;
   --color-gray-blue: rgba(135, 154, 154, 1);
 
   --text-shadow-header-black: -4px -4px 4px rgb(125 125 125 / 0.5);
@@ -151,6 +151,15 @@
 
   .button-services {
     @apply flex justify-center items-center p-2 bg-black hover:bg-black-hover active:bg-black-active text-white rounded-xl border border-black-border hover:border-black-border-hover active:border-black-border-active;
+  }
+  #site-header nav a {
+    @apply transition-colors;
+  }
+  #site-header.light-header nav a {
+    @apply text-black hover:text-gray-700;
+  }
+  #site-header.dark-header nav a {
+    @apply text-white hover:text-white-blue;
   }
 }
 
