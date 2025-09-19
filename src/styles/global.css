@@ -62,8 +62,10 @@
 
   --color-black: #242b2f;
   --color-white: #fafafa;
+
   --color-gray-text: #d9d9d9;
   --color-dark-gray-text: #414141;
+
   --color-black-line: rgba(0, 0, 0, 0.4);
   --color-white-line: rgba(255, 255, 255, 0.4);
 
@@ -72,6 +74,10 @@
   --color-black-border: rgba(44, 44, 44, 1);
   --color-black-border-hover: rgba(55, 55, 55, 1);
   --color-black-border-active: rgba(66, 66, 66, 1);
+
+  --color-offwhite: #F0F5F5;
+  --color-white-blue: #F0F8FF;
+  --color-gray-blue: rgba(135, 154, 154, 1);
 
   --text-shadow-header-black: -4px -4px 4px rgb(125 125 125 / 0.5);
   --text-shadow-yellow: 4px 4px 4px rgb(177 204 0 / 0.3);
