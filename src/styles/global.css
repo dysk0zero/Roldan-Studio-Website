@@ -84,16 +84,10 @@
 @layer utilities {
   .bg-custom {
     background: linear-gradient(
-        250deg,
-        rgba(36, 41, 47, 0.2) 90%,
-        rgba(255, 208, 245, 0.2) 100%
-      ),
-      linear-gradient(
-        85deg,
-        rgba(36, 41, 47, 0.1) 92.5%,
-        rgba(255, 208, 245, 0.1) 100%
-      ),
-      #24292f;
+      250deg,
+      rgba(36, 41, 47, 0.2) 88%,
+      rgba(255, 208, 245, 0.14) 100%
+    );
   }
 }
 
