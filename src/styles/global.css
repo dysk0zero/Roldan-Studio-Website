@@ -75,8 +75,8 @@
   --color-black-border-hover: rgba(55, 55, 55, 1);
   --color-black-border-active: rgba(66, 66, 66, 1);
 
-  --color-offwhite: #F0F5F5;
-  --color-white-blue: #F0F8FF;
+  --color-offwhite: #F0F5FF;
+  --color-white-blue: #E6F8FF;
   --color-gray-blue: rgba(135, 154, 154, 1);
 
   --text-shadow-header-black: -4px -4px 4px rgb(125 125 125 / 0.5);
