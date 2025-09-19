@@ -75,8 +75,8 @@
   --color-black-border-hover: rgba(55, 55, 55, 1);
   --color-black-border-active: rgba(66, 66, 66, 1);
 
-  --color-offwhite: #F5FAFF;
-  --color-white-blue: #F0F8FF;
+  --color-offwhite: #f5faff;
+  --color-white-blue: #f0f8ff;
   --color-gray-blue: rgba(135, 154, 154, 1);
 
   --text-shadow-header-black: -4px -4px 4px rgb(125 125 125 / 0.5);
@@ -160,6 +160,12 @@
   }
   #site-header.dark-header nav a {
     @apply text-white hover:text-white-blue;
+  }
+  #site-header.light-header svg {
+    @apply text-black;
+  }
+  #site-header.dark-header svg {
+    @apply text-white;
   }
 }
 
