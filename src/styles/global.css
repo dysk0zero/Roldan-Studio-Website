@@ -81,6 +81,22 @@
   --text-shadow-golden: 4px 4px 4px rgb(111 128 0 / 0.6);
 }
 
+@layer utilities {
+  .bg-custom {
+    background: linear-gradient(
+        250deg,
+        rgba(36, 41, 47, 0.2) 90%,
+        rgba(255, 208, 245, 0.2) 100%
+      ),
+      linear-gradient(
+        85deg,
+        rgba(36, 41, 47, 0.1) 92.5%,
+        rgba(255, 208, 245, 0.1) 100%
+      ),
+      #24292f;
+  }
+}
+
 .section-wrapper {
   @apply flex flex-col mx-auto max-w-7xl px-3 md:px-6 lg:px-8 items-center;
 }
