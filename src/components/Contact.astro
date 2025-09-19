@@ -1,18 +1,57 @@
+---
+import { ArrowRight } from "@lucide/astro";
+---
+
 <div class="section-wrapper">
-  <section
-    id="Contact"
-    class="flex w-full border-x border-white-line"
-  >
-    <div class="section-margin-top section-margin-bottom flex-col md:flex-row w-full">
-    <header>
-      <h2>Got a project in the pipeline?</h2>
-    </header>
-    <form>
-      <div>
-        <label for="full_name">Your name</label>
-        <input type="text" id="full_name" name="name" />
-      </div>
-    </form>
-  </div>
+  <section id="Contact" class="flex w-full border-x border-white-line">
+    <div
+      class="section-margin-top section-margin-bottom flex-col md:flex-row w-full"
+    >
+      <header class="flex justify-center py-12 px-6 ">
+        <h2 class="font-bold text-3xl">Got a project in the pipeline?</h2>
+      </header>
+      <form class="flex flex-col w-full ">
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name *"
+          class="p-4 border-b border-t border-white-line"
+          required
+        />
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Email *"
+          class="p-4 border-b border-white-line"
+          required
+        />
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Tell me a bit about your project... *"
+          class="h-48 p-4 border-b border-white-line"
+          required></textarea>
+
+        <div
+          style="position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;"
+        >
+          <label for="website">Website</label>
+          <input
+            type="text"
+            id="website"
+            name="website"
+            tabindex="-1"
+            autocomplete="off"
+          />
+        </div>
+
+        <button type="submit" id="submit" class="flex justify-between p-4 border-b border-white-line">
+          <span class="font-medium">Submit</span>
+          <ArrowRight class="w-6 h-6" />
+        </button>
+      </form>
+    </div>
   </section>
 </div>
