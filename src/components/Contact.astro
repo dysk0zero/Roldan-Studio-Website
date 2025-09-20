@@ -15,6 +15,7 @@ import { ArrowRight } from "@lucide/astro";
         </h2>
       </header>
       <form
+        id="contact-form"
         method="POST"
         action="https://formspree.io/f/meolypyv"
         class="flex flex-col w-full lg:max-w-xl lg:border-l border-white-line"
@@ -43,9 +44,12 @@ import { ArrowRight } from "@lucide/astro";
           required></textarea>
 
         <button
+          data-sitekey="6Lfuis8rAAAAABk6r_T5tJQp59M8Q_ii6Z3LiUwd" 
+          data-callback='onSubmit' 
+          data-action='submit'
           type="submit"
           id="submit"
-          class="flex justify-between cursor-pointer p-4 border-b border-white-line hover:bg-white/5 active:bg-white/10"
+          class="g-recaptcha flex justify-between cursor-pointer p-4 border-b border-white-line hover:bg-white/5 active:bg-white/10"
         >
           <span class="font-medium xl:text-xl">Submit</span>
           <ArrowRight class="w-6 h-6" />
@@ -54,3 +58,13 @@ import { ArrowRight } from "@lucide/astro";
     </div>
   </section>
 </div>
+
+<script src="https://www.google.com/recaptcha/api.js" defer></script>
+
+ <script>
+   function onSubmit(token) {
+     document.getElementById("demo-form").submit();
+   }
+
+
+ </script>
