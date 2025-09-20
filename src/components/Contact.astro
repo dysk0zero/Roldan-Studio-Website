@@ -66,5 +66,16 @@ import { ArrowRight } from "@lucide/astro";
      document.getElementById("demo-form").submit();
    }
 
+    function reCaptchaOnFocus() {
+      var head = document.getElementsByTagName('head')[0]
+      var script = document.createElement('script')
+      script.type = 'text/javascript';
+      script.src = 'https://www.google.com/recaptcha/api.js'
+      head.appendChild(script);
+      document.getElementById('name').removeEventListener('focus', reCaptchaOnFocus)
+      document.getElementById('email').removeEventListener('focus', reCaptchaOnFocus)
+    };
 
+    document.getElementById('subName').addEventListener('focus', reCaptchaOnFocus, false);
+    document.getElementById('subEmail').addEventListener('focus', reCaptchaOnFocus, false);
  </script>
