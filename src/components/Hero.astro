@@ -6,15 +6,16 @@ import pfp from "../assets/images/pfp_high_res.avif";
 <div class="section-wrapper">
   <section
     id="Hero"
-    class="dark-bg flex flex-col md:flex-row w-full min-h-[calc(100vh-64px)] items-center justify-between border-x border-black-line"
+    class="dark-bg flex flex-col md:flex-row w-full min-h-[calc(100vh-64px)] items-center justify-between border-x border-white-line"
   >
-    <Image
-      src={pfp}
-      alt="Javier's profile picture"
-      width={400}
-      height={400}
-      layout="constrained"
-    />
+<div class="relative w-full max-w-[400px] aspect-square text-white-line">
+  <Image src={pfp} alt="Javier's profile picture" widths={[300,400]} sizes="(max-width:640px) 300px, 400px" />
+  <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 400" aria-hidden="true">
+    <circle cx="200" cy="200" r="199"
+      fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke" />
+  </svg>
+</div>
+
 
     <div>
       <h1>Hi! I'm Javi</h1>
