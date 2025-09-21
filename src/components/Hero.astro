@@ -1,28 +1,43 @@
 ---
 import { Image } from "astro:assets";
-import pfp from "../assets/images/pfp_high_res.avif";
+import pfp from "../assets/images/pfp.avif";
 ---
 
 <div class="section-wrapper">
   <section
     id="Hero"
-    class="dark-bg flex flex-col md:flex-row w-full min-h-[calc(100vh-64px)] items-center justify-between border-x border-white-line"
+    class="dark-bg flex flex-col md:flex-row-reverse w-full min-h-[calc(100vh-64px)] items-center justify-between  px-6 py-16 gap-12 border-x border-t border-white-line"
   >
-<div class="relative w-full max-w-[400px] aspect-square text-white-line">
-  <Image src={pfp} alt="Javier's profile picture" widths={[300,400]} sizes="(max-width:640px) 300px, 400px" />
-  <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 400" aria-hidden="true">
-    <circle cx="200" cy="200" r="199"
-      fill="none" stroke="currentColor" stroke-width="2" vector-effect="non-scaling-stroke" />
-  </svg>
-</div>
-
-
-    <div>
-      <h1>Hi! I'm Javi</h1>
-      <h2>As a developer & designer, I build custom websites for people.</h2>
+    <div class="relative max-w-[400px] max-h-[400px] m-6 text-white-line">
+      <Image
+        src={pfp}
+        alt="Javier's profile picture"
+        width={400}
+        height={400}
+      />
+      <div class="pointer-events-none absolute inset-0 bg-black/15"></div>
+      <svg class="absolute inset-0" viewBox="0 0 400 400" aria-hidden="true">
+        <circle
+          cx="200"
+          cy="200"
+          r="199"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          vector-effect="non-scaling-stroke"></circle>
+      </svg>
     </div>
-    <a>
-      <span>Start a Project</span>
-    </a>
+
+    <div class="flex flex-col">
+      <div class="flex flex-col gap-4">
+        <h1 class="font-bold text-3xl text-shadow-teal">Hi! I'm Javi</h1>
+        <h2 class="font-medium text-xl text-shadow-teal">
+          As a developer & designer, I build custom websites for people.
+        </h2>
+      </div>
+      <a>
+        <span>Start a Project</span>
+      </a>
+    </div>
   </section>
 </div>

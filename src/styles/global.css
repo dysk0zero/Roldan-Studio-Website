@@ -86,6 +86,7 @@
   --text-shadow-green: 4px 4px 4px rgb(92 204 82 / 0.3);
   --text-shadow-violet: 4px 4px 4px rgb(128 0 100 / 0.6);
   --text-shadow-golden: 4px 4px 4px rgb(111 128 0 / 0.6);
+  --text-shadow-teal: 4px 4px 4px rgb(0 128 100 / 0.6);
 }
 
 @layer base {
