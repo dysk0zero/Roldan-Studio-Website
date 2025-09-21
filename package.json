@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@lucide/astro": "^0.544.0",
-    "astro": "^5.13.7"
+    "astro": "^5.13.7",
+    "vercel": "^25.2.0"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.13",

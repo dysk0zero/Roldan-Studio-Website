@@ -57,7 +57,6 @@ import Logo from "../assets/Logo.svg";
         header.classList.add(isLight ? "light-header" : "dark-header");
       };
 
-      // Initial mode
       const mid = window.innerHeight / 2;
       const initial = [...sections].find((el) => {
         const r = el.getBoundingClientRect();
@@ -65,7 +64,6 @@ import Logo from "../assets/Logo.svg";
       });
       if (initial) setMode(initial.classList.contains("light-bg"));
 
-      // Pick threshold depending on viewport width
       const vw = window.innerWidth;
       const threshold = vw < 1024 ? 0.2 : 0.45;
 

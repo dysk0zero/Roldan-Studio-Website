@@ -1,15 +1,23 @@
 ---
-
+import { Image } from "astro:assets";
+import pfp from "../assets/images/pfp_high_res.avif";
 ---
 
 <div class="section-wrapper">
-  <section 
+  <section
     id="Hero"
     class="dark-bg flex flex-col md:flex-row w-full min-h-[calc(100vh-64px)] items-center justify-between border-x border-black-line"
   >
-    <Image src="./pfp.avif" />
+    <Image
+      src={pfp}
+      alt="Javier's profile picture"
+      width={400}
+      height={400}
+      layout="constrained"
+    />
+
     <div>
-      <h1>Hi! I’m Javi</h1>
+      <h1>Hi! I'm Javi</h1>
       <h2>As a developer & designer, I build custom websites for people.</h2>
     </div>
     <a>
