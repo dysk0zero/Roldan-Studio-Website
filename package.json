@@ -6,7 +6,9 @@
     "dev": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "playwright test",
+    "show-report": "playwright show-report --host 0.0.0.0"
   },
   "dependencies": {
     "@lucide/astro": "^0.544.0",
@@ -14,7 +16,9 @@
     "vercel": "^25.2.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.55.0",
     "@tailwindcss/vite": "^4.1.13",
+    "@types/node": "^24.5.2",
     "tailwindcss": "^4.1.13"
   }
 }
