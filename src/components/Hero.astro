@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import pfp from "../assets/images/pfp.avif";
+import { ArrowRight } from "@lucide/astro";
 ---
 
 <div class="section-wrapper">
@@ -35,8 +36,9 @@ import pfp from "../assets/images/pfp.avif";
           As a developer & designer, I build custom websites for people.
         </h2>
       </div>
-      <a>
+      <a href="#Services" class="flex gap-2 items-center text-white hover:text-offwhite hover:text-shadow-zinc-700 active:text-white-blue whitespace-nowrap">
         <span class="font-bold text-2xl">Start a Project</span>
+        <ArrowRight class="h-8 w-8 stroke-[2.5]" />
       </a>
     </div>
   </section>
