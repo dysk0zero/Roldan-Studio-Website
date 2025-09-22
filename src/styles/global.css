@@ -69,7 +69,7 @@
   --color-black-line: rgba(0, 0, 0, 0.4);
   --color-white-line: rgba(255, 255, 255, 0.4);
 
-  --color-black-hover: #313A40;
+  --color-black-hover: #313a40;
   --color-black-active: #3b3b4d;
   --color-black-border: rgba(44, 44, 44, 1);
   --color-black-border-hover: rgba(55, 55, 55, 1);
@@ -79,7 +79,7 @@
   --color-white-blue: #f0f8ff;
   --color-gray-blue: rgba(135, 154, 154, 1);
 
-  --color-hover-nav: #76808F;
+  --color-hover-nav: #76808f;
 
   --text-shadow-header-black: -4px -4px 4px rgb(125 125 125 / 0.5);
   --text-shadow-yellow: 4px 4px 4px rgb(177 204 0 / 0.3);
@@ -94,6 +94,8 @@
   --drop-shadow-CTA: 0 0 4px rgb(179 179 179 / 0.2);
   --text-shadow-CTA-2: 0 0 4px rgb(111 128 0 / 0.2);
   --drop-shadow-CTA-2: 0 0 4px rgb(111 128 0 / 0.2);
+
+  --box-shadow-card: 0 0 4px rgba(255 255 255 / 0.8);
 }
 
 @layer base {
@@ -189,13 +191,12 @@
     position: relative;
     display: inline-block;
   }
-
   .logo-shimmer:hover {
     mask-image: linear-gradient(
       120deg,
       transparent 0%,
       rgba(255, 255, 255, 0.9) 60%,
-      rgba(255, 255, 255, 0.9) 100%
+      rgba(255, 255, 255, 0.9) 90%
     );
     mask-size: 200%;
     mask-position: 0% 0;
@@ -211,11 +212,26 @@
     -webkit-mask-position: -100% 0;
     -webkit-animation: logo-shine 0.6s ease-out forwards;
   }
-
   @keyframes logo-shine {
     to {
       mask-position: 100% 0;
       -webkit-mask-position: 100% 0;
     }
+  }
+
+  .outline-shadow-card {
+    position: relative;
+  }
+  .outline-shadow-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    box-shadow: 0 0 8px 0 rgba(250, 250, 250, 0.2); /* outline + shadow */
+    transition: box-shadow 0.3s ease;
+    border-radius: 12px;
+  }
+  .outline-shadow-card:hover::before {
+    box-shadow: 0 0 12px 0 rgba(250, 250, 250, 0.3); /* stronger on hover */
   }
 }
