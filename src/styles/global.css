@@ -161,10 +161,10 @@
     @apply transition-colors;
   }
   #site-header.light-header nav a {
-    @apply text-black hover:text-gray-700;
+    @apply text-black hover:text-gray-500;
   }
   #site-header.dark-header nav a {
-    @apply text-white hover:text-white-blue;
+    @apply text-white hover:text-gray-blue;
   }
   #site-header.light-header svg {
     @apply text-black;

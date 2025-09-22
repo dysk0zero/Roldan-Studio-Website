@@ -65,7 +65,15 @@ import Logo from "../assets/Logo.svg";
       if (initial) setMode(initial.classList.contains("light-bg"));
 
       const vw = window.innerWidth;
-      const threshold = vw < 1024 ? 0.2 : 0.45;
+      let threshold;
+
+      if (vw < 1024) {
+        threshold = 0.2;
+      } else if (vw < 1640) {
+        threshold = 0.45;
+      } else {
+        threshold = 0.6;
+      }
 
       const observer = new IntersectionObserver(
         (entries) => {
@@ -85,4 +93,3 @@ import Logo from "../assets/Logo.svg";
     }
   });
 </script>
-
