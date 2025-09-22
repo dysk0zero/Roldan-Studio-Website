@@ -79,6 +79,8 @@
   --color-white-blue: #f0f8ff;
   --color-gray-blue: rgba(135, 154, 154, 1);
 
+  --color-hover-nav: #6B7382;
+
   --text-shadow-header-black: -4px -4px 4px rgb(125 125 125 / 0.5);
   --text-shadow-yellow: 4px 4px 4px rgb(177 204 0 / 0.3);
   --text-shadow-blue: 4px 4px 4px rgb(51 194 204 / 0.3);
@@ -161,10 +163,10 @@
     @apply transition-colors;
   }
   #site-header.light-header nav a {
-    @apply text-black hover:text-gray-500;
+    @apply text-black hover:text-hover-nav;
   }
   #site-header.dark-header nav a {
-    @apply text-white hover:text-gray-blue;
+    @apply text-white hover:text-hover-nav;
   }
   #site-header.light-header svg {
     @apply text-black;
