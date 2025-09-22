@@ -85,11 +85,12 @@
   --text-shadow-pink: 4px 4px 4px rgb(204 131 183 / 0.3);
   --text-shadow-green: 4px 4px 4px rgb(92 204 82 / 0.3);
   --text-shadow-violet: 4px 4px 4px rgb(128 0 100 / 0.6);
-  --text-shadow-golden: 4px 4px 4px rgb(111 128 0 / 0.6);
+  --text-shadow-golden: 4px 4px 4px rgb(111 128 0 / 0.3);
   --text-shadow-teal: 4px 4px 4px rgb(0 128 100 / 0.6);
 
   --text-shadow-CTA: 4px 4px 4px rgb(179 179 179 / 0.3);
   --drop-shadow-CTA: 4px 4px 4px rgb(179 179 179 / 0.3);
+  --drop-shadow-golden: 4px 4px 4px rgb(111 128 0 / 0.3);
 }
 
 @layer base {

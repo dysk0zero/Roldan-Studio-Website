@@ -1,10 +1,12 @@
 import { defineConfig, devices } from '@playwright/test';
 
 const iosNames = [
+  'iPhone SE (3rd gen)',
   'iPhone 12',
   'iPhone 14',
   'iPhone 14 Pro Max',
-  'iPhone SE (3rd gen)'
+  'iPad Mini',
+  'iPad Pro 11'
 ].filter(n => devices[n]);
 
 const androidNames = [
@@ -33,29 +35,6 @@ export default defineConfig({
     // Android → Mobile Chrome (Chromium)
     ...androidNames.map(n => ({ name: n, use: { ...devices[n] } })),
 
-    // “Small” popular sizes
-    {
-      name: 'iOS Small 375x667',
-      use: {
-        browserName: 'webkit',
-        viewport: { width: 375, height: 667 },
-        deviceScaleFactor: 2,
-        isMobile: true,
-        hasTouch: true,
-        userAgent: devices['iPhone 12']?.userAgent,
-      },
-    },
-    {
-      name: 'Android Small 360x640',
-      use: {
-        browserName: 'chromium',
-        viewport: { width: 360, height: 640 },
-        deviceScaleFactor: 3,
-        isMobile: true,
-        hasTouch: true,
-        userAgent: devices['Pixel 5']?.userAgent,
-      },
-    },
   ],
   webServer: {
     command: 'npm run dev',
