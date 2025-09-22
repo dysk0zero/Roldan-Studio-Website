@@ -99,7 +99,7 @@ const cards = [
           class="flex flex-col md:max-w-3xl lg:max-w-4xl gap-4 md:gap-5 lg:gap-6 xl:gap-7"
         >
           <h2
-            class="font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-shadow-golden"
+            class="font-bold text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-shadow-golden "
           >
             I build to last.
           </h2>
@@ -110,16 +110,21 @@ const cards = [
           </p>
         </div>
         <a
+        data-animate-left
+        data-delay="0.5"
         href="#Services"
-          class="flex gap-1 lg:gap-2 items-center text-white md:justify-end hover:text-offwhite hover:text-shadow-golden hover:drop-shadow-golden active:text-white-blue whitespace-nowrap">
+          class="group flex gap-1 lg:gap-2 items-center md:justify-end
+          text-white hover:text-offwhite hover:text-shadow-CTA-2 hover:drop-shadow-CTA-2 active:text-white-blue 
+          whitespace-nowrap">
         <span
           class="font-bold text-xl lg:text-2xl xl:text-3xl text-left md:text-right"
         >
-          Let's build together!
+          Let's build!
         </span>
-        <ArrowRight class="h-6 w-6 lg:h-9 lg:w-9 stroke-[2.5] xl:stroke-[3]" />
+        <ArrowRight class="h-6 w-6 lg:h-9 lg:w-9 stroke-[2.5] xl:stroke-[3] transition-transform duration-300 group-hover:translate-x-1" />
         </a>
       </div>
     </div>
   </section>
 </div>
+

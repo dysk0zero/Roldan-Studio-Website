@@ -5,7 +5,7 @@ import { ArrowRight } from "@lucide/astro";
 ---
 
 <div class="section-wrapper">
-  <section
+  <section 
     id="Hero"
     class="dark-bg flex flex-col md:flex-row-reverse w-full
          min-h-[calc(100svh-96px)]
@@ -17,6 +17,8 @@ import { ArrowRight } from "@lucide/astro";
          border-x border-t border-white-line"
   >
     <div
+      data-animate-right
+      data-duration="0.3"
       class="relative max-w-[200px] max-h-[200px] md:max-w-[250px] md:max-h-[250px] lg:max-w-[280px] lg:max-h-[280px] xl:max-w-[300px] xl:max-h-[300px] mb-8 mx-8 md:mt-[-12px] lg:mt-[-48px] xl:mt-[-96px] text-white-line"
     >
       <Image
@@ -52,6 +54,8 @@ import { ArrowRight } from "@lucide/astro";
     </div>
 
     <div
+      data-animate-left
+      data-duration="0.3"
       class="contents md:flex md:flex-col
       md:gap-32 lg:gap-40 xl:gap-60
       lg:py-4
@@ -70,10 +74,10 @@ import { ArrowRight } from "@lucide/astro";
       >
         <a
           href="#Services"
-          class="flex gap-2 items-center text-white hover:text-offwhite hover:text-shadow-CTA hover:drop-shadow-CTA active:text-white-blue whitespace-nowrap"
+          class="group flex gap-2 items-center text-white hover:text-offwhite hover:text-shadow-CTA hover:drop-shadow-CTA active:text-white-blue whitespace-nowrap"
         >
           <span class="font-bold text-3xl lg:text-5xl">Start a Project</span>
-          <ArrowRight class="h-8 w-8 lg:h-10 lg:w-10 stroke-3 xl:stroke-[3.5]" />
+          <ArrowRight class="h-8 w-8 lg:h-10 lg:w-10 stroke-3 xl:stroke-[3.5] transition-transform duration-300 group-hover:translate-x-1" />
         </a>
       </div>
     </div>
