@@ -10,7 +10,9 @@ import Logo from "../assets/Logo.svg";
   <div class="section-wrapper">
     <div class="flex w-full py-4 px-1 max-h-16 justify-between items-center">
       <a href="/" aria-label="Home" class="flex items-center">
-        <Logo class="h-9 w-auto" />
+        <div class="logo-shimmer group">
+          <Logo class="h-9 w-auto logo-highlight group" />
+        </div>
       </a>
       <nav class="hidden lg:flex w-full">
         <ul class="lg:flex list-none w-full justify-center gap-6">
@@ -40,7 +42,9 @@ import Logo from "../assets/Logo.svg";
         class="group flex gap-1 px-3 py-2 items-center rounded-xl bg-white hover:bg-offwhite active:bg-white-blue border border-gray-blue/50 whitespace-nowrap"
       >
         <span class="font-medium text-black">Start a Project</span>
-        <ArrowRight class="h-4 w-4 stroke-[2.5] lg:stroke-3 text-black transition-transform duration-300 group-hover:translate-x-1.5" />
+        <ArrowRight
+          class="h-4 w-4 stroke-[2.5] lg:stroke-3 text-black transition-transform duration-300 group-hover:translate-x-1.5"
+        />
       </a>
     </div>
   </div>
