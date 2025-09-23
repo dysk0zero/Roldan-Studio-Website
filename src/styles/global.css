@@ -82,13 +82,14 @@
   --color-hover-nav: #76808f;
 
   --text-shadow-header-black: -4px -4px 4px rgb(125 125 125 / 0.5);
+  --text-shadow-header-white: -4px -4px 6px rgb(245 245 245 / 0.3);
   --text-shadow-yellow: 4px 4px 4px rgb(177 204 0 / 0.3);
   --text-shadow-blue: 4px 4px 4px rgb(51 194 204 / 0.3);
   --text-shadow-pink: 4px 4px 4px rgb(204 131 183 / 0.3);
   --text-shadow-green: 4px 4px 4px rgb(92 204 82 / 0.3);
-  --text-shadow-violet: 4px 4px 4px rgb(128 0 100 / 0.6);
-  --text-shadow-golden: 4px 4px 4px rgb(111 128 0 / 0.6);
-  --text-shadow-teal: 4px 4px 4px rgb(0 128 100 / 0.6);
+  --text-shadow-violet: 4px 4px 4px rgb(128 0 100 / 0.4 );
+  --text-shadow-golden: 4px 4px 4px rgb(111 128 0 / 0.4);
+  --text-shadow-teal: 4px 4px 4px rgb(0 128 100 / 0.4);
 
   --text-shadow-CTA: 0 0 4px rgb(179 179 179 / 0.2);
   --drop-shadow-CTA: 0 0 4px rgb(179 179 179 / 0.2);

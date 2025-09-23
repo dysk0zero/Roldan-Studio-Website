@@ -5,7 +5,7 @@ const cards = [
   {
     id: "01",
     title: "Design",
-    desc: "100% custom, no templates. Every website is designed for your brand, and works perfectly on mobile and desktop.",
+    desc: "100% custom, no templates. Every website is designed for your brand, and to look great on mobile and desktop.",
     position: 2,
     colorBack: "rgba(109, 246, 255, 0.2)",
     colorMiddle: "rgba(208, 255, 244, 0.5)",
@@ -15,7 +15,7 @@ const cards = [
   {
     id: "02",
     title: "Performance",
-    desc: "Fast and optimized websites you fully own. Choose Webflow, Framer, or custom code.",
+    desc: "Fast and optimized websites you fully own. Choose Webflow or custom code, according to your needs.",
     position: 3,
     colorBack: "rgba(252, 109, 255, 0.2)",
     colorMiddle: "rgba(255, 208, 245, 0.5)",
@@ -60,9 +60,9 @@ const cards = [
       {
         cards.map((c) => (
           <article
-            class={"flex flex-col p-4 md:pt-0 md:border-l border-white-line"}
+            class={"flex flex-col p-4 md:border-l border-white-line"}
           >
-            <p class="hidden md:block p-4 text-sm">{c.id}</p>
+            <p class="hidden p-4 text-sm">{c.id}</p>
             <div class="relative flex flex-col h-full p-3 xl:p-4 pb-6 xl:pb-7 pr-4 xl:pr-5 gap-2 xl:gap-3">
               <div class="absolute inset-0">
                 <div
@@ -85,7 +85,7 @@ const cards = [
                   {c.title}
                 </h2>
               </header>
-              <p class="relative font-medium z-10">{c.desc}</p>
+              <p class="relative font-medium xl:text-lg z-10">{c.desc}</p>
             </div>
           </article>
         ))
