@@ -21,7 +21,6 @@ export default defineConfig({
     baseURL: 'http://localhost:4321',
     headless: true,
     screenshot: 'on',
-    video: { mode: 'on', size: { width: 1280, height: 720 } },
     trace: 'on-first-retry',
   },
   projects: [
