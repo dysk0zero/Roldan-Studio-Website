@@ -2,7 +2,10 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import alpine from "@astrojs/alpinejs";
 
+import sitemap from "@astrojs/sitemap";
+
 export default defineConfig({
+  site: 'https://jbroldan.dev',
   i18n: {
     locales: ["en", "es", "de"],
     defaultLocale: "en",
@@ -11,7 +14,7 @@ export default defineConfig({
     },
   },
   middleware : true,
-  integrations: [alpine()],
+  integrations: [alpine(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
     server: {

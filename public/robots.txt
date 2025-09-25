@@ -1,0 +1,4 @@
+# /public/robots.txt
+User-agent: *
+Allow: /
+Sitemap: https://jbroldan.dev/sitemap-index.xml
