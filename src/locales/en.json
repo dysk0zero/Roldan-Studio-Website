@@ -1,4 +1,10 @@
 {
+  "layout": {
+    "title": "Roldan Studio - Freelance Web Designer & Developer",
+    "description": "Boost your business with fast, optimized websites with no monthly fees and visible results. Clean design, real performance.",
+    "url": "https://jbroldan.dev/",
+    "lang": "en"
+  },
   "hero": {
     "title": "Hi! I'm Javi",
     "subtitle": "As developer & designer, I build high-performance websites that boost sales.",

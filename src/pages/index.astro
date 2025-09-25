@@ -9,17 +9,9 @@ import WhatIDo from "../components/WhatIDo.astro";
 import Layout from "../layouts/Layout.astro";
 
 import en from "../locales/en.json";
-
-if (
-  Astro.currentLocale === "en" &&
-  Astro.preferredLocale &&
-  Astro.preferredLocale !== "en"
-) {
-  return Astro.redirect(`/${Astro.preferredLocale}/`);
-}
 ---
 
-<Layout>
+<Layout t={en.layout} >
   <Hero t={en.hero} />
   <WhatIDo />
   <HowIWork />

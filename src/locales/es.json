@@ -1,4 +1,10 @@
 {
+  "layout": {
+    "title": "Roldan Studio - Diseño Web & Desarrollo Freelance",
+    "description": "Impulsa tu negocio con sitios web rápidos, optimizados y sin costes mensuales. Diseño eficiente, resultados reales.",
+    "url": "https://jbroldan.dev/es",
+    "lang": "es"
+  },
   "hero": {
     "title": "Hola! Soy Javi",
     "subtitle": "Como desarrollador y diseñador, creo sitios web de alto rendimiento que aumentan las ventas.",

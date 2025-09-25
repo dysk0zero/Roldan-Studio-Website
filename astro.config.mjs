@@ -6,6 +6,13 @@ export default defineConfig({
   i18n: {
     locales: ["en", "es", "de"],
     defaultLocale: "en",
+        routing: {
+      prefixDefaultLocale: false,
+      redirectToDefaultLocale: true,
+    },
+    fallback: {
+      de: "es",
+    },
   },
   integrations: [alpine()],
   vite: {
