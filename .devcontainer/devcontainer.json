@@ -2,7 +2,7 @@
   "name": "Node.js & TypeScript",
   "image": "mcr.microsoft.com/devcontainers/typescript-node",
   "forwardPorts": [4321, 9323, 46723],
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "npm install -g pnpm && pnpm install",
   "customizations": {
     "vscode": {
       "extensions": [
