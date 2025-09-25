@@ -1,27 +1,26 @@
 import { defineMiddleware } from "astro/middleware";
 
-const supportedLocales = ["en", "es", "de"];
-const defaultLocale = "en";
+const supportedLocales = ["es", "de"];
 
 export const onRequest = defineMiddleware((context, next) => {
   const url = new URL(context.request.url);
-
-  // Si ya está en una ruta de idioma, no redirige
   const pathname = url.pathname;
-  if (supportedLocales.some((locale) => pathname.startsWith(`/${locale}`))) {
-    return next(); // Continúa la solicitud normal
+
+  // Ya está en una ruta localizada, no hacemos nada
+  if (pathname.startsWith("/es") || pathname.startsWith("/de")) {
+    return next();
   }
 
-  // Detectar idioma preferido
+  // Detectamos idioma del navegador
   const preferredLang = context.request.headers
     .get("accept-language")
     ?.split(",")[0]
     .split("-")[0];
 
-  const locale = supportedLocales.includes(preferredLang ?? "")
-    ? preferredLang
-    : defaultLocale;
+  if (preferredLang && supportedLocales.includes(preferredLang)) {
+    return Response.redirect(`${url.origin}/${preferredLang}${pathname}`, 302);
+  }
 
-  // Redireccionar
-  return Response.redirect(`${url.origin}/${locale}`, 302);
+  // Si no hay preferencia o no es "es" ni "de", continuamos normal en "/"
+  return next();
 });
