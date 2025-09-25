@@ -1,16 +1,18 @@
+// src/middleware.ts
 import { defineMiddleware } from 'astro:middleware';
 
-const SUPPORTED_LOCALES = ['es', 'de'];
-
 export const onRequest = defineMiddleware((context, next) => {
-  const url = new URL(context.request.url);
-  const pathname = url.pathname;
+  const { pathname } = context.url;
 
-  const acceptLang = context.request.headers.get("accept-language") ?? "";
-  const preferred = acceptLang.split(",")[0].split("-")[0];
-
-  if (SUPPORTED_LOCALES.includes(preferred)) {
-    return context.redirect(`/${preferred}/`);
+  if (pathname === '/') {
+    const acceptLanguage = context.request.headers.get('accept-language');
+    if (acceptLanguage) {
+      const lang = acceptLanguage.split(',')[0].split('-')[0];
+      const supported = ['es', 'de'];
+      if (supported.includes(lang)) {
+        return context.redirect(`/${lang}/`);
+      }
+    }
   }
 
   return next();
