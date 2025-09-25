@@ -10,14 +10,7 @@ import Layout from "../layouts/Layout.astro";
 
 import en from "../locales/en.json";
 
-const supportedLocales = ["en", "es", "de"];
-const fallbackLocale = "en";
-
-const baseLocale = Astro.preferredLocale?.split("-")[0] ?? fallbackLocale;
-
-if (baseLocale !== fallbackLocale && supportedLocales.includes(baseLocale)) {
-  throw Astro.redirect(`/${baseLocale}/`);
-}
+export const prerender = false;
 ---
 
 <Layout t={en.layout} >
