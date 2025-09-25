@@ -9,10 +9,8 @@ export default defineConfig({
         routing: {
       prefixDefaultLocale: false,
     },
-    fallback: {
-      de: "es",
-    },
   },
+  middleware : true,
   integrations: [alpine()],
   vite: {
     plugins: [tailwindcss()],
