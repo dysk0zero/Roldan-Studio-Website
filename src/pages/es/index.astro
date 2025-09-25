@@ -1,0 +1,22 @@
+---
+import Contact from "../../components/Contact.astro";
+import Hero from "../../components/Hero.astro";
+import HowIWork from "../../components/HowIWork.astro";
+import Manifest from "../../components/Manifest.astro";
+import Services from "../../components/Services.astro";
+import Testimonies from "../../components/Testimonies.astro";
+import WhatIDo from "../../components/WhatIDo.astro";
+import Layout from "../../layouts/Layout.astro";
+
+import es from "../../locales/es.json";
+---
+
+<Layout>
+  <Hero t={es.hero} />
+  <WhatIDo />
+  <HowIWork />
+  <Manifest />
+  <Services />
+  <Testimonies />
+  <Contact />
+</Layout>

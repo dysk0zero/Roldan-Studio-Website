@@ -3,6 +3,10 @@ import tailwindcss from "@tailwindcss/vite";
 import alpine from "@astrojs/alpinejs";
 
 export default defineConfig({
+  i18n: {
+    locales: ["en", "es", "de"],
+    defaultLocale: "en",
+  },
   integrations: [alpine()],
   vite: {
     plugins: [tailwindcss()],

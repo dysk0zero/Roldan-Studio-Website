@@ -7,10 +7,20 @@ import Services from "../components/Services.astro";
 import Testimonies from "../components/Testimonies.astro";
 import WhatIDo from "../components/WhatIDo.astro";
 import Layout from "../layouts/Layout.astro";
+
+import en from "../locales/en.json";
+
+if (
+  Astro.currentLocale === "en" &&
+  Astro.preferredLocale &&
+  Astro.preferredLocale !== "en"
+) {
+  return Astro.redirect(`/${Astro.preferredLocale}/`);
+}
 ---
 
 <Layout>
-  <Hero />
+  <Hero t={en.hero} />
   <WhatIDo />
   <HowIWork />
   <Manifest />
