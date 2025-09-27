@@ -7,6 +7,7 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://jbroldan.dev",
+  trailingSlash: "never",
   i18n: {
     locales: ["en", "es", "de"],
     defaultLocale: "en",
