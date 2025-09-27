@@ -1,0 +1,63 @@
+---
+import ServicesCardDivider from "./ServicesCardDivider.astro";
+
+interface Props {
+  title: string;
+  subtitle: string;
+  cta: string;
+  isCustom: boolean;
+  t: {
+    listTitle1: string;
+    listTitle2: string;
+    listTitle3Custom: string;
+    listTitle3NotCustom: string;
+    listTitle4: string;
+  };
+}
+
+const { title, subtitle, cta, isCustom, t } = Astro.props as Props;
+
+const listTitle3 = isCustom ? t.listTitle3Custom : t.listTitle3NotCustom;
+---
+
+<article class="wrapper">
+  <header class="header-wrapper">
+    <h2 class="title">{title}</h2>
+    <p class="text-dark-gray-text">{subtitle}</p>
+  </header>
+
+  <a href="#Contact" class="button-services w-full">{cta}</a>
+
+  <ServicesCardDivider text={t.listTitle1} />
+
+  <slot name="outcomes" />
+
+  <ServicesCardDivider text={t.listTitle2} class="hidden" />
+
+  <slot name="features" class="hidden" />
+
+  <ServicesCardDivider text={listTitle3} />
+
+  <slot name="dev" />
+
+  <ServicesCardDivider text={t.listTitle4} />
+
+  <slot name="pricing" />
+</article>
+
+<style>
+  @reference "../styles/global.css";
+  .wrapper {
+    @apply flex flex-col items-start w-full p-6 gap-6 rounded-xl border border-black-line;
+  }
+
+  .header-wrapper {
+    @apply flex flex-col gap-3;
+  }
+  .title {
+    @apply font-bold text-xl xl:text-2xl;
+  }
+  .button-services {
+    @apply flex justify-center items-center p-2 bg-black hover:bg-black-hover active:bg-black-active text-white rounded-xl border border-black-border hover:border-black-border-hover active:border-black-border-active;
+  }
+</style>

@@ -12,7 +12,6 @@ import {
   Database,
   ShoppingCart,
   FileText,
-  FramerIcon,
   Settings,
   Layers,
   ShieldCheck,
@@ -23,76 +22,103 @@ import {
   Headset,
   CodeXml,
   LayoutDashboard,
+  CalendarCheck,
 } from "@lucide/astro";
+import ServicesCard from "./ServicesCard.astro";
+import ServicesIconList from "./ServicesIconList.astro";
 
-const staticOutcomes = [
-  { icon: Rocket, text: "Launch fast." },
-  { icon: Gauge, text: "Great speed and SEO." },
-  { icon: PiggyBank, text: "Low monthly cost." },
-  { icon: Wrench, text: "I handle updates on request. You don't touch code." },
-  { icon: ArrowUpRight, text: "Option to upgrade later to a dynamic site." },
+import type { ServiceVM } from "../types";
+import { pair } from "../utils/pair";
+
+const { t, cardDividers } = Astro.props;
+
+const staticOutcomeIcons = [
+  Rocket,
+  Gauge,
+  PiggyBank,
+  Wrench,
+  CalendarCheck,
+  ArrowUpRight,
 ];
-
-const staticFeatures = [
-  { icon: Files, text: "Up to 5 pages" },
-  { icon: Palette, text: "Basic styleguide" },
-  { icon: PenTool, text: "Full design" },
-  { icon: Route, text: "User-flow diagrams" },
-  { icon: Search, text: "Basic SEO strategy" },
-  { icon: ChartColumn, text: "Analytics & domain setup" },
-  { icon: Headset, text: "Real-time project updates" },
+const staticFeatureIcons = [
+  Files,
+  Palette,
+  PenTool,
+  Route,
+  Search,
+  ChartColumn,
+  Headset,
 ];
+const staticDevIcons = [Webflow, CodeXml];
 
-const staticDev = [
-  { icon: Webflow, text: "Webflow" },
-  { icon: CodeXml, text: "Full Code" },
+const dynamicOutcomeIcons = [
+  Pencil,
+  Gauge,
+  ShoppingCart,
+  Database,
+  CalendarCheck,
+  FileText,
 ];
-
-const dynamicOutcomes = [
-  { icon: Pencil, text: "Update and edit the content yourself." },
-  { icon: Gauge, text: "Great speed and SEO." },
-  { icon: FileText, text: "Add a blog or pages showcasing your work." },
-  { icon: Database, text: "Keep all your content organized in one database." },
-  { icon: ShoppingCart, text: "Sell products on your site." },
+const dynamicFeatureIcons = [
+  Database,
+  ShoppingCart,
+  Files,
+  Palette,
+  PenTool,
+  Route,
+  Search,
+  ChartColumn,
+  Headset,
 ];
+const dynamicDevIcons = [Webflow, CodeXml];
 
-const dynamicFeatures = [
-  { icon: Database, text: "CMS" },
-  { icon: ShoppingCart, text: "E-commerce" },
-  { icon: Files, text: "Unlimited pages" },
-  { icon: Palette, text: "Basic styleguide" },
-  { icon: PenTool, text: "Full design" },
-  { icon: Route, text: "User-flow diagrams" },
-  { icon: Search, text: "Basic SEO strategy" },
-  { icon: ChartColumn, text: "Analytics & domain setup" },
-  { icon: Headset, text: "Real-time project updates" },
-];
+const customOutcomeIcons = [Settings, Layers, ShieldCheck, LayoutDashboard];
+const customDevIcons = [CodeXml];
 
-const dynamicDev = [
-  { icon: Webflow, text: "Webflow" },
-  { icon: CodeXml, text: "Full Code" },
-];
+const staticOutcomes = pair(staticOutcomeIcons, t.static.outcomesList);
+const staticFeatures = pair(staticFeatureIcons, t.static.featuresList);
+const staticDev = pair(staticDevIcons, t.static.devList);
 
-const customOutcomes = [
+const dynamicOutcomes = pair(dynamicOutcomeIcons, t.dynamic.outcomesList);
+const dynamicFeatures = pair(dynamicFeatureIcons, t.dynamic.featuresList);
+const dynamicDev = pair(dynamicDevIcons, t.dynamic.devList);
+
+const customOutcomes = pair(customOutcomeIcons, t.custom.outcomesList);
+const customDev = pair(customDevIcons, t.custom.devList);
+
+
+const services: ServiceVM[] = [
   {
-    icon: Settings,
-    text: "Full control of features, logic, and integrations.",
+    title: t.static.title,
+    subtitle: t.static.subtitle,
+    cta: t.static.cta,
+    isCustom: Boolean(t.static.isCustom),
+    outcomes: staticOutcomes,
+    features: staticFeatures,
+    dev: staticDev,
+    price: t.static.pricing,
   },
   {
-    icon: Layers,
-    text: "Scales to thousands of products, users, or data points.",
+    title: t.dynamic.title,
+    subtitle: t.dynamic.subtitle,
+    cta: t.dynamic.cta,
+    isCustom: Boolean(t.dynamic.isCustom),
+    outcomes: dynamicOutcomes,
+    features: dynamicFeatures,
+    dev: dynamicDev,
+    price: t.dynamic.pricing,
   },
   {
-    icon: ShieldCheck,
-    text: "Secure infrastructure with auth, payments, and APIs.",
-  },
-  {
-    icon: LayoutDashboard,
-    text: "Custom workflows and dashboards for your team.",
+    title: t.custom.title,
+    subtitle: t.custom.subtitle,
+    cta: t.custom.cta,
+    isCustom: Boolean(t.custom.isCustom),
+    outcomes: customOutcomes,
+    features: [],
+    dev: customDev,
+    price: t.custom.pricing,
   },
 ];
-
-const customDev = [{ icon: CodeXml, text: "Full Code" }];
 ---
 
 <div class="w-full light-bg bg-white">
@@ -109,186 +135,42 @@ const customDev = [{ icon: CodeXml, text: "Full Code" }];
           data-delay="0.3"
           class="opacity-0 mx-auto font-bold text-3xl lg:text-5xl xl:text-6xl leading-tight text-center text-shadow-header-black"
         >
-          Transparent Pricing in Every Quote
+          {t.header}
         </h2>
       </header>
 
       <div
         class="section-margin-bottom flex flex-col md:flex-row items-start w-full p-6 gap-6 xl:p-8 xl:gap-8 border-b border-black-line"
       >
-        <article
-          class="flex flex-col items-start w-full p-6 gap-6 rounded-xl border border-black-line"
-        >
-          <header class="flex flex-col gap-3">
-            <h2 class="font-bold text-xl xl:text-2xl">Static Marketing Site</h2>
-            <p class="text-dark-gray-text">
-              The best option for simple sites that don't need monthly changes.
-            </p>
-          </header>
-          <a role="button" href="#Contact" class="button-services w-full">
-            Let's begin!
-          </a>
-          <div class="flex w-full items-center gap-3 justify-between">
-            <hr class="flex-grow bg-black" />
-            <h3 class="text-sm font-medium text-dark-gray-text">Outcomes</h3>
-            <hr class="flex-grow bg-black" />
-          </div>
-          <ul class="flex flex-col gap-3">
-            {
-              staticOutcomes.map(({ icon: Icon, text }) => (
-                <li class="flex items-center gap-3">
-                  <Icon class="w-5 h-5 shrink-0" />
-                  <span>{text}</span>
-                </li>
-              ))
-            }
-          </ul>
-          <!--
-          <div class="hidden md:flex w-full items-center gap-3 justify-between">
-            <hr class="flex-grow bg-black" />
-            <h3 class="text-sm font-medium text-dark-gray-text">Features</h3>
-            <hr class="flex-grow bg-black" />
-          </div>
-          <ul class="hidden md:flex md:flex-col gap-3">
-            {
-              staticFeatures.map(({ icon: Icon, text }) => (
-                <li class="flex items-center gap-3">
-                  <Icon class="w-5 h-5 shrink-0" />
-                  <span>{text}</span>
-                </li>
-              ))
-            }
-          </ul>
-          -->
-          <div class="flex w-full items-center gap-3 justify-between">
-            <hr class="flex-grow bg-black" />
-            <h3 class="text-sm font-medium text-dark-gray-text">
-              Pick One
-            </h3>
-            <hr class="flex-grow bg-black" />
-          </div>
-          <ul class="flex flex-col gap-3">
-            {
-              staticDev.map(({ icon: Icon, text }) => (
-                <li class="flex items-center gap-3">
-                  <Icon class="w-5 h-5 shrink-0" />
-                  <span>{text}</span>
-                </li>
-              ))
-            }
-          </ul>
-        </article>
-        <article
-          class="flex flex-col items-start w-full p-6 gap-6 rounded-xl border border-black-line"
-        >
-          <header class="flex flex-col gap-3">
-            <h2 class="font-bold text-xl xl:text-2xl">
-              Dynamic Marketing Site
-            </h2>
-            <p class="text-dark-gray-text">
-              Perfect for sites that require continuous changes or
-              small stores.
-            </p>
-          </header>
-          <a role="button" href="#Contact" class="button-services w-full">
-            Let's build!
-          </a>
-          <div class="flex w-full items-center gap-3 justify-between">
-            <hr class="flex-grow bg-black" />
-            <h3 class="text-sm font-medium text-dark-gray-text">Outcomes</h3>
-            <hr class="flex-grow bg-black" />
-          </div>
-          <ul class="flex flex-col gap-3">
-            {
-              dynamicOutcomes.map(({ icon: Icon, text }) => (
-                <li class="flex items-center gap-3">
-                  <Icon class="w-5 h-5 shrink-0" />
-                  <span>{text}</span>
-                </li>
-              ))
-            }
-          </ul>
-          <!--
-          <div class="hidden md:flex w-full items-center gap-3 justify-between">
-            <hr class="flex-grow bg-black" />
-            <h3 class="text-sm font-medium text-dark-gray-text">Features</h3>
-            <hr class="flex-grow bg-black" />
-          </div>
-          <ul class="hidden md:flex md:flex-col gap-3">
-            {
-              dynamicFeatures.map(({ icon: Icon, text }) => (
-                <li class="flex items-center gap-3">
-                  <Icon class="w-5 h-5 shrink-0" />
-                  <span>{text}</span>
-                </li>
-              ))
-            }
-          </ul>
-           -->
-          <div class="flex w-full items-center gap-3 justify-between">
-            <hr class="flex-grow bg-black" />
-            <h3 class="text-sm font-medium text-dark-gray-text">
-             Pick One
-            </h3>
-            <hr class="flex-grow bg-black" />
-          </div>
-          <ul class="flex flex-col gap-3">
-            {
-              dynamicDev.map(({ icon: Icon, text }) => (
-                <li class="flex items-center gap-3">
-                  <Icon class="w-5 h-5 shrink-0" />
-                  <span>{text}</span>
-                </li>
-              ))
-            }
-          </ul>
-        </article>
-        <article
-          class="flex flex-col items-start w-full p-6 gap-6 rounded-xl border border-black-line"
-        >
-          <header class="flex flex-col gap-3">
-            <h2 class="font-bold text-xl xl:text-2xl">Custom Project</h2>
-            <p class="text-dark-gray-text">
-              For development of complex web applications or big ecommerce
-              sites.
-            </p>
-          </header>
-          <a role="button" href="#Contact" class="button-services w-full">
-            Get a quote
-          </a>
-          <div class="flex w-full items-center gap-3 justify-between">
-            <hr class="flex-grow bg-black" />
-            <h3 class="text-sm font-medium text-dark-gray-text">Outcomes</h3>
-            <hr class="flex-grow bg-black" />
-          </div>
-          <ul class="flex flex-col gap-3">
-            {
-              customOutcomes.map(({ icon: Icon, text }) => (
-                <li class="flex items-center gap-3">
-                  <Icon class="w-5 h-5 shrink-0" />
-                  <span>{text}</span>
-                </li>
-              ))
-            }
-          </ul>
-          <div class="flex w-full items-center gap-3 justify-between">
-            <hr class="flex-grow bg-black" />
-            <h3 class="text-sm font-medium text-dark-gray-text">
-              Development
-            </h3>
-            <hr class="flex-grow bg-black" />
-          </div>
-          <ul class="flex flex-col gap-3">
-            {
-              customDev.map(({ icon: Icon, text }) => (
-                <li class="flex items-center gap-3">
-                  <Icon class="w-5 h-5 shrink-0" />
-                  <span>{text}</span>
-                </li>
-              ))
-            }
-          </ul>
-        </article>
+        {
+          services.map((svc) => (
+            <ServicesCard
+              title={svc.title}
+              subtitle={svc.subtitle}
+              cta={svc.cta}
+              isCustom={svc.isCustom}
+              t={cardDividers}
+            >
+              <ServicesIconList slot="outcomes" items={svc.outcomes} />
+
+              <ServicesIconList
+                slot="features"
+                class="hidden md:flex-col"
+                items={svc.features}
+              />
+
+              <ServicesIconList slot="dev" items={svc.dev} />
+
+              <p
+                slot="pricing"
+                class="w-full text-center p-1 
+                text-xl font-light tracking-wide text-gray-800"
+              >
+                <span>{svc.price}</span>
+              </p>
+            </ServicesCard>
+          ))
+        }
       </div>
     </section>
   </div>

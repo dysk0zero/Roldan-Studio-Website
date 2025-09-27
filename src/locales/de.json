@@ -9,5 +9,81 @@
     "title": "Hi! Ich bin Javi",
     "subtitle": "Als Entwickler und Designer baue ich leistungsstarke Websites, die den Umsatz steigern.",
     "cta": "Projekt starten"
+  },
+  "services": {
+    "header": "Transparente Preise in jedem Angebot",
+    "static": {
+      "title": "Statische Marketing-Website",
+      "subtitle": "Die beste Option für einfache Websites ohne monatliche Änderungen.",
+      "cta": "Lass uns beginnen!",
+      "isCustom": 0,
+      "outcomesList": [
+        "Schnell online gehen.",
+        "Hohe Geschwindigkeit und SEO.",
+        "Geringe laufende Kosten.",
+        "Aktualisierungen auf Anfrage durch mich. Kein Code nötig.",
+        "Integriertes Buchungssystem mit Kalender-Synchronisierung.",
+        "Option für späteres Upgrade zu einer dynamischen Website."
+      ],
+      "featuresList": [
+        "Bis zu 5 Seiten",
+        "Basis-Styleguide",
+        "Komplettes Design",
+        "User-Flow-Diagramme",
+        "Basis-SEO",
+        "Analytics & Domain",
+        "Echtzeit-Aktualisierungen"
+      ],
+      "devList": ["Webflow", "Vollständiger Code"],
+      "pricing": "Ab 1500 €"
+    },
+    "dynamic": {
+      "title": "Dynamische Marketing-Website",
+      "subtitle": "Ideal für Websites mit laufenden Änderungen oder kleine Shops.",
+      "cta": "Lass uns loslegen!",
+      "isCustom": 0,
+      "outcomesList": [
+        "Inhalte selbst aktualisieren und bearbeiten.",
+        "Hohe Geschwindigkeit und SEO.",
+        "Produkte direkt auf der Website verkaufen.",
+        "Alle Inhalte in einer einzigen Datenbank organisiert.",
+        "Integriertes Buchungssystem mit Kalender-Synchronisierung.",
+        "Blog oder Seiten hinzufügen, die Ihre Arbeit zeigen."
+      ],
+      "featuresList": [
+        "CMS",
+        "E-Commerce",
+        "Unbegrenzte Seiten",
+        "Basis-Styleguide",
+        "Komplettes Design",
+        "User-Flow-Diagramme",
+        "Grundlegende SEO-Strategie",
+        "Analytics- und Domain-Einrichtung",
+        "Projekt-Updates in Echtzeit"
+      ],
+      "devList": ["Webflow", "Vollständiger Code"],
+      "pricing": "Ab 2500 €"
+    },
+    "custom": {
+      "title": "Individuelle Web-App",
+      "subtitle": "Für die Entwicklung komplexer Webanwendungen oder großer E-Commerce-Sites.",
+      "cta": "Angebot anfordern",
+      "isCustom": 1,
+      "outcomesList": [
+        "Volle Kontrolle über Funktionen, Logik und Integrationen.",
+        "Skalierbar auf Tausende von Produkten, Nutzer:innen oder Datenpunkten.",
+        "Sichere Infrastruktur mit Authentifizierung, Zahlungen und APIs.",
+        "Individuelle Workflows und Dashboards für Ihr Team."
+      ],
+      "devList": ["Vollständiger Code"],
+      "pricing": "Auf Anfrage"
+    }
+  },
+  "serviceCard": {
+    "listTitle1": "Ergebnisse",
+    "listTitle2": "Funktionen",
+    "listTitle3Custom": "Entwicklung",
+    "listTitle3NotCustom": "Eine Option wählen",
+    "listTitle4": "Preise"
   }
 }

@@ -9,5 +9,81 @@
     "title": "Hola! Soy Javi",
     "subtitle": "Como desarrollador y diseñador, creo sitios web de alto rendimiento que aumentan las ventas.",
     "cta": "Iniciar Proyecto"
+  },
+  "services": {
+    "header": "Precios transparentes en cada presupuesto",
+    "static": {
+      "title": "Sitio de marketing estático",
+      "subtitle": "La mejor opción para sitios sencillos que no necesitan cambios mensuales.",
+      "cta": "¡Empecemos!",
+      "isCustom": 0,
+      "outcomesList": [
+        "Lanza rápido.",
+        "Gran velocidad y SEO.",
+        "Bajo coste mensual.",
+        "Yo me encargo de las actualizaciones bajo demanda. Tú no tocas código.",
+        "Sistema de reservas integrado con sincronización de calendario.",
+        "Opción de actualizar más adelante a un sitio dinámico."
+      ],
+      "featuresList": [
+        "Hasta 5 páginas",
+        "Guía de estilo básica",
+        "Diseño completo",
+        "Diagramas de flujo de usuario",
+        "SEO básico",
+        "Analítica y dominio",
+        "Actualizaciones en tiempo real"
+      ],
+      "devList": ["Webflow", "Código completo"],
+      "pricing": "Desde 1500 €"
+    },
+    "dynamic": {
+      "title": "Sitio de marketing dinámico",
+      "subtitle": "Perfecto para sitios que requieren cambios continuos o tiendas pequeñas.",
+      "cta": "¡Construyámoslo!",
+      "isCustom": 0,
+      "outcomesList": [
+        "Actualiza y edita el contenido tú mismo.",
+        "Gran velocidad y SEO.",
+        "Vende productos en tu sitio.",
+        "Mantén todo tu contenido organizado en una sola base de datos.",
+        "Sistema de reservas integrado con sincronización de calendario.",
+        "Añade un blog o páginas que muestren tu trabajo."
+      ],
+      "featuresList": [
+        "CMS",
+        "Comercio electrónico",
+        "Páginas ilimitadas",
+        "Guía de estilo básica",
+        "Diseño completo",
+        "Diagramas de flujo de usuario",
+        "Estrategia SEO básica",
+        "Configuración de analítica y dominio",
+        "Actualizaciones del proyecto en tiempo real"
+      ],
+      "devList": ["Webflow", "Código completo"],
+      "pricing": "Desde 2500 €"
+    },
+    "custom": {
+      "title": "Aplicación web personalizada",
+      "subtitle": "Para el desarrollo de aplicaciones web complejas o grandes sitios de comercio electrónico.",
+      "cta": "Solicitar presupuesto",
+      "isCustom": 1,
+      "outcomesList": [
+        "Control total de funciones, lógica e integraciones.",
+        "Escala a miles de productos, usuarios o puntos de datos.",
+        "Infraestructura segura con autenticación, pagos y APIs.",
+        "Flujos de trabajo y paneles personalizados para tu equipo."
+      ],
+      "devList": ["Código completo"],
+      "pricing": "Según Proyecto"
+    }
+  },
+  "serviceCard": {
+    "listTitle1": "Resultados",
+    "listTitle2": "Funciones",
+    "listTitle3Custom": "Desarrollo",
+    "listTitle3NotCustom": "Elige una",
+    "listTitle4": "Precios"
   }
 }

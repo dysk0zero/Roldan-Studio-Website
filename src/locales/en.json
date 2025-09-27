@@ -9,5 +9,81 @@
     "title": "Hi! I'm Javi",
     "subtitle": "As developer & designer, I build high-performance websites that boost sales.",
     "cta": "Start a Project"
+  },
+  "services": {
+    "header": "Transparent Pricing in Every Quote",
+    "static": {
+      "title": "Static Marketing Site",
+      "subtitle": "The best option for simple sites that don't need monthly changes.",
+      "cta": "Let's begin!",
+      "isCustom": 0,
+      "outcomesList": [
+        "Launch fast.",
+        "Great speed and SEO.",
+        "Low monthly cost.",
+        "I handle updates on request. You don't touch code.",
+        "Integrated booking system with calendar sync.",
+        "Option to upgrade later to a dynamic site."
+      ],
+      "featuresList": [
+        "Up to 5 pages",
+        "Basic styleguide",
+        "Full design",
+        "User-flow diagrams",
+        "Basic SEO",
+        "Analytics & domain",
+        "Real-time updates"
+      ],
+      "devList": ["Webflow", "Full code"],
+      "pricing": "From 1500€"
+    },
+    "dynamic": {
+      "title": "Dynamic Marketing Site",
+      "subtitle": "Perfect for sites that require continuous changes or small stores.",
+      "cta": "Let's build!",
+      "isCustom": 0,
+      "outcomesList": [
+        "Update and edit the content yourself.",
+        "Great speed and SEO.",
+        "Sell products on your site.",
+        "Keep all your content organized in one database.",
+        "Integrated booking system with calendar sync.",
+        "Add a blog or pages showcasing your work."
+      ],
+      "featuresList": [
+        "CMS",
+        "E-commerce",
+        "Unlimited pages",
+        "Basic styleguide",
+        "Full design",
+        "User-flow diagrams",
+        "Basic SEO strategy",
+        "Analytics & domain setup",
+        "Real-time project updates"
+      ],
+      "devList": ["Webflow", "Full code"],
+      "pricing": "From 2500€"
+    },
+    "custom": {
+      "title": "Custom Web App",
+      "subtitle": "For development of complex web applications or big ecommerce sites.",
+      "cta": "Get a quote",
+      "isCustom": 1,
+      "outcomesList": [
+        "Full control of features, logic, and integrations.",
+        "Scales to thousands of products, users, or data points.",
+        "Secure infrastructure with auth, payments, and APIs.",
+        "Custom workflows and dashboards for your team."
+      ],
+      "devList": ["Full code"],
+      "pricing": "On Request"
+    }
+  },
+  "serviceCard": {
+    "listTitle1": "Outcomes",
+    "listTitle2": "Features",
+    "listTitle3Custom": "Development",
+    "listTitle3NotCustom": "Pick One",
+    "listTitle4": "Pricing"
   }
 }
