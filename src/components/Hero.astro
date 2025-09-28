@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import pfp from "../assets/images/pfp.avif";
 import { ArrowRight } from "@lucide/astro";
 
-const {t} = Astro.props;
+const { t } = Astro.props;
 ---
 
 <div class="section-wrapper">
@@ -31,30 +31,17 @@ const {t} = Astro.props;
         alt="Javier's profile picture"
         format="avif"
         loading="eager"
+        fetchpriority="high"
         height="300"
         width="300"
       />
       <div class="pointer-events-none absolute inset-0 bg-black/15"></div>
-      <svg
-        x-data="{
-      isLg: window.matchMedia('(min-width: 1024px)').matches,
-      init() {
-        const mq = window.matchMedia('(min-width: 1024px)');
-        this.isLg = mq.matches;
-        mq.addEventListener('change', (e) => this.isLg = e.matches);
-      }
-    }"
-        viewBox="0 0 400 400"
-        class="absolute inset-0"
-        aria-hidden="true"
-      >
+      <svg viewBox="0 0 400 400" class="absolute inset-0" aria-hidden="true">
         <circle
           cx="200"
           cy="200"
-          :r="isLg ? 197 : 198"
-          :class="isLg ? 'stroke-[4]' : 'stroke-[2]'"
-          fill="none"
-          stroke="currentColor"
+          r="198"
+          class="fill-none stroke-current stroke-[2] lg:stroke-[4]"
           vector-effect="non-scaling-stroke"></circle>
       </svg>
     </div>
