@@ -1,8 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-import alpine from "@astrojs/alpinejs";
 import vercel from "@astrojs/vercel/serverless";
-
 import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
@@ -16,7 +14,7 @@ export default defineConfig({
     },
   },
   middleware: true,
-  integrations: [alpine(), sitemap()],
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
     server: {

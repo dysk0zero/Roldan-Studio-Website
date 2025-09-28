@@ -8,7 +8,8 @@
   "hero": {
     "title": "Hola! Soy Javi",
     "subtitle": "Como desarrollador y diseñador, creo sitios web de alto rendimiento que aumentan las ventas.",
-    "cta": "Iniciar Proyecto"
+    "cta": "Iniciar Proyecto",
+    "altImage": "Foto de perfil de Javier."
   },
   "services": {
     "header": "Precios transparentes en cada presupuesto",

@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  wrapperClass?: string;
+  image: ImageMetadata;
+  description: string;
+  format?: "avif" | "webp" | "png" | "jpeg";
+  loading?: "eager" | "lazy";
+  fetchpriority?: "high" | "low" | "auto";
+  widths?: number[];
+  sizes?: string;
+}
+
+const {
+  wrapperClass,
+  image,
+  description,
+  format,
+  loading,
+  fetchpriority,
+  widths,
+  sizes,
+} = Astro.props as Props;
+---
+
+<div
+  data-animate-right
+  data-duration="0.3"
+  class={`opacity-0 relative text-white-line ${wrapperClass ?? ""}`}
+>
+  <Image
+    src={image}
+    alt={description}
+    format={format}
+    loading={loading}
+    fetchpriority={fetchpriority}
+    widths={widths}
+    sizes={sizes}
+    decoding="async"
+  />
+  <div class="pointer-events-none absolute inset-0 bg-black/15"></div>
+  <svg viewBox="0 0 400 400" class="absolute inset-0" aria-hidden="true">
+    <circle
+      cx="200"
+      cy="200"
+      r="198"
+      class="fill-none stroke-current stroke-[2] lg:stroke-[4]"
+      vector-effect="non-scaling-stroke"
+    >
+    </circle>
+  </svg>
+</div>
