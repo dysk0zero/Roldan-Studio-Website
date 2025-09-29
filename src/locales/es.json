@@ -48,6 +48,58 @@
       "CTA": "¡Construyamos!"
     }
   },
+  "howIWork": {
+    "title": "Cómo trabajamos juntos",
+    "cards": [
+      {
+        "step": "1. descubrimiento",
+        "desc": "Empezamos entendiendo tu negocio y tus objetivos.",
+        "items": [
+          "Entender tus necesidades",
+          "Definir juntos el brief del proyecto",
+          "Establecer objetivos, alcance y cronograma",
+          "Investigar a la competencia para tener contexto"
+        ],
+        "color": "text-shadow-yellow",
+        "border": "border-b md:border-r border-black-line/40"
+      },
+      {
+        "step": "2. creatividad",
+        "desc": "Exploramos ideas y sentamos las bases de tu sitio web.",
+        "items": [
+          "Brainstorming",
+          "Benchmarking",
+          "Planificar contenido, estructura y arquitectura",
+          "Crear un moodboard"
+        ],
+        "color": "text-shadow-blue",
+        "border": "border-b border-black-line/40"
+      },
+      {
+        "step": "3. diseño",
+        "desc": "Convertimos las ideas en maquetaciones claras y un diseño final.",
+        "items": [
+          "Definir la guía de estilo",
+          "Wireframes",
+          "Planificar el recorrido del usuario",
+          "Diseño final"
+        ],
+        "color": "text-shadow-pink",
+        "border": "border-b md:border-0 md:border-r border-black-line/40"
+      },
+      {
+        "step": "4. desarrollo",
+        "desc": "Damos vida al diseño con código limpio y una verificación final antes del lanzamiento.",
+        "items": [
+          "Construir la estructura del sitio en HTML y CSS",
+          "Adaptarlo a móvil y escritorio (responsive)",
+          "Aplicar SEO on-page",
+          "Pruebas de rendimiento y control de calidad (QA)"
+        ],
+        "color": "text-shadow-green"
+      }
+    ]
+  },
   "services": {
     "header": "Precios Transparentes En Cada Presupuesto",
     "static": {
@@ -56,12 +108,12 @@
       "cta": "¡Empecemos!",
       "isCustom": 0,
       "outcomesList": [
-        "Lanza rápido.",
+        "Arranca rápido.",
         "Gran velocidad y SEO.",
-        "Bajo coste mensual.",
+        "Bajo o nulo coste mensual.",
         "Yo me encargo de las actualizaciones bajo demanda. Tú no tocas código.",
-        "Sistema de reservas integrado con sincronización de calendario.",
-        "Opción de actualizar más adelante a un sitio dinámico."
+        "Sistema de reservas integrado con tu calendario.",
+        "Opción de ampliar más adelante a un sitio dinámico."
       ],
       "featuresList": [
         "Hasta 5 páginas",
@@ -83,7 +135,7 @@
       "outcomesList": [
         "Actualiza y edita el contenido tú mismo.",
         "Gran velocidad y SEO.",
-        "Vende productos en tu sitio.",
+        "Vende productos en tu web.",
         "Mantén todo tu contenido organizado en una sola base de datos.",
         "Sistema de reservas integrado con sincronización de calendario.",
         "Añade un blog o páginas que muestren tu trabajo."

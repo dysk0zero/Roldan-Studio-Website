@@ -28,7 +28,7 @@
       {
         "id": "02",
         "title": "Performance",
-        "desc": "Fast and optimized websites you fully own. Choose Webflow or custom code, according to your needs.",        
+        "desc": "Fast and optimized websites you fully own. Choose Webflow or custom code, according to your needs.",
         "colorBack": "rgba(252, 109, 255, 0.2)",
         "colorMiddle": "rgba(255, 208, 245, 0.5)",
         "gradientFront": "linear-gradient(129deg, rgba(96, 9, 98, 0.08) 44.04%, rgba(98, 9, 78, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(255, 208, 242, 0.25)"
@@ -36,7 +36,7 @@
       {
         "id": "03",
         "title": "SEO",
-        "desc": "Websites optimized for SEO and accessibility. Easy to navigate, search-friendly, and built to rank on Google.",        
+        "desc": "Websites optimized for SEO and accessibility. Easy to navigate, search-friendly, and built to rank on Google.",
         "colorBack": "rgba(235, 255, 109, 0.2)",
         "colorMiddle": "rgba(255, 248, 208, 0.5)",
         "gradientFront": "linear-gradient(129deg, rgba(96, 98, 9, 0.08) 44.04%, rgba(85, 98, 9, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(255, 245, 208, 0.25)"
@@ -47,6 +47,58 @@
       "text": "A good website should serve you for years. I follow your vision, keep the code clean, and avoid shortcuts so you can own it, update it, and grow with it.",
       "CTA": "Let's build!"
     }
+  },
+  "howIWork": {
+    "title": "How We Build Together",
+    "cards": [
+      {
+        "step": "1. discovery",
+        "desc": "We start by understanding your business and your goals.",
+        "items": [
+          "Understand your needs",
+          "Define the project brief together",
+          "Set goals, project scope and timeline",
+          "Research competitors for context"
+        ],
+        "color": "text-shadow-yellow",
+        "border": "border-b md:border-r border-black-line/40"
+      },
+      {
+        "step": "2. creativity",
+        "desc": "We explore ideas and set the foundation of your website.",
+        "items": [
+          "Brainstorming",
+          "Benchmarking",
+          "Plan content, structure, and architecture.",
+          "Create a moodboard"
+        ],
+        "color": "text-shadow-blue",
+        "border": "border-b border-black-line/40"
+      },
+      {
+        "step": "3. design",
+        "desc": "We turn ideas into clear layouts and a finished design.",
+        "items": [
+          "Define the styleguide",
+          "Wireframes",
+          "Plan the “user journey”",
+          "Final design"
+        ],
+        "color": "text-shadow-pink",
+        "border": "border-b md:border-0 md:border-r border-black-line/40"
+      },
+      {
+        "step": "4. development",
+        "desc": "We bring the design to life with clean code and a final check before launch.",
+        "items": [
+          "Build the website structure in HTML & CSS",
+          "Make it responsive for mobile and desktop",
+          "Apply on-page SEO",
+          "Performance and QA tests"
+        ],
+        "color": "text-shadow-green"
+      }
+    ]
   },
   "services": {
     "header": "Transparent Pricing In Every Quote",
@@ -61,7 +113,7 @@
         "Low monthly cost.",
         "I handle updates on request. You don't touch code.",
         "Integrated booking system with calendar sync.",
-        "Option to upgrade later to a dynamic site."
+        "Option to later scale to a dynamic site."
       ],
       "featuresList": [
         "Up to 5 pages",

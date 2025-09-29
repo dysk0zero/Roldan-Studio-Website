@@ -48,6 +48,58 @@
       "CTA": "Lassen Sie uns loslegen!"
     }
   },
+  "howIWork": {
+    "title": "So Bauen Wir Gemeinsam",
+    "cards": [
+      {
+        "step": "1. erkundung",
+        "desc": "Wir beginnen damit, Ihr Unternehmen und Ihre Ziele zu verstehen.",
+        "items": [
+          "Ihre Bedürfnisse verstehen",
+          "Das Projektbriefing gemeinsam definieren",
+          "Ziele, Projektumfang und Zeitplan festlegen",
+          "Wettbewerber zur Einordnung recherchieren"
+        ],
+        "color": "text-shadow-yellow",
+        "border": "border-b md:border-r border-black-line/40"
+      },
+      {
+        "step": "2. kreativität",
+        "desc": "Wir erkunden Ideen und legen die Grundlage für Ihre Website.",
+        "items": [
+          "Brainstorming",
+          "Benchmarking",
+          "Inhalte, Struktur und Informationsarchitektur planen",
+          "Ein Moodboard erstellen"
+        ],
+        "color": "text-shadow-blue",
+        "border": "border-b border-black-line/40"
+      },
+      {
+        "step": "3. design",
+        "desc": "Wir verwandeln Ideen in klare Layouts und ein finales Design.",
+        "items": [
+          "Den Styleguide definieren",
+          "Wireframes",
+          "Die „User Journey“ planen",
+          "Finales Design"
+        ],
+        "color": "text-shadow-pink",
+        "border": "border-b md:border-0 md:border-r border-black-line/40"
+      },
+      {
+        "step": "4. entwicklung",
+        "desc": "Wir erwecken das Design zum Leben und führen vor dem Launch einen letzten Check durch.",
+        "items": [
+          "Die Website-Struktur in HTML & CSS aufbauen",
+          "Responsives Verhalten für Mobilgeräte und Desktop umsetzen",
+          "On-Page-SEO anwenden",
+          "Leistungs- und QA-Tests"
+        ],
+        "color": "text-shadow-green"
+      }
+    ]
+  },
   "services": {
     "header": "Transparente Preise in jedem Angebot",
     "static": {

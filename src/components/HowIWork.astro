@@ -1,59 +1,19 @@
 ---
-const steps = [
-  {
-    step: "1. discovery",
-    desc: "We start by understanding your business and your goals.",
-    items: [
-      "Understand your needs",
-      "Define the project brief together",
-      "Set goals, project scope and timeline",
-      "Research competitors for context",
-    ],
-    color: "text-shadow-yellow",
-    border: "border-b md:border-r border-black-line/40",
-  },
-  {
-    step: "2. creativity",
-    desc: "We explore ideas and set the foundation of your website.",
-    items: [
-      "Brainstorming",
-      "Benchmarking",
-      "Plan content, structure, and architecture.",
-      "Create a moodboard",
-    ],
-    color: "text-shadow-blue",
-    border: "border-b border-black-line/40",
-  },
-  {
-    step: "3. design",
-    desc: "We turn ideas into clear layouts and a finished design.",
-    items: [
-      "Define the styleguide",
-      "Wireframes",
-      "Plan the “user journey”",
-      "Final design",
-    ],
-    color: "text-shadow-pink",
-    border: "border-b md:border-0 md:border-r border-black-line/40",
-  },
-  {
-    step: "4. development",
-    desc: "We bring the design to life with clean code and a final check before launch.",
-    items: [
-      "Build the website structure in HTML & CSS",
-      "Make it responsive for mobile and desktop",
-      "Apply on-page SEO",
-      "Performance and QA tests",
-    ],
-    color: "text-shadow-green",
-    border: "",
-  },
-];
+import HowIWorkCard from "./HowIWorkCard.astro";
+
+const { t } = Astro.props;
+
+const cards: { 
+  step: string; 
+  desc: string; 
+  items: string[]; 
+  color: string; 
+  border?: string; 
+}[] = Astro.props.cards
 ---
 
 <div class="w-full light-bg bg-white">
   <div class="section-wrapper relative isolate overflow-hidden text-black">
-
     <!-- Real Content -->
     <section
       class="flex flex-col w-full items-center border-x border-black-line"
@@ -67,7 +27,7 @@ const steps = [
           data-delay="0.3"
           class="opacity-0 mx-auto font-bold text-3xl lg:text-5xl xl:text-6xl leading-tight text-center text-shadow-header-black"
         >
-          How We Build Together
+          {t.title}
         </h2>
       </header>
 
@@ -75,24 +35,14 @@ const steps = [
         class="section-margin-bottom grid grid-cols-1 md:grid-cols-2 w-full border-b border-black-line"
       >
         {
-          steps.map((s) => (
-            <article
-              class={`flex flex-col gap-2 lg:gap-3 py-4 px-5 md:py-5 md:px-6 lg:py-6 lg:px-8 ${s.border}`}
-            >
-              <header class={"flex flex-col gap-2 lg:gap-3"}>
-                <h3 class={`font-bold text-2xl lg:text-3xl ${s.color}`}>
-                  {s.step}
-                </h3>
-                <p class={`italic text-lg xl:text-xl ${s.color}`}>{s.desc}</p>
-              </header>
-              <ul
-                class={`list-disc pl-6 pt-2 leading-[150%] xl:text-lg ${s.color}`}
-              >
-                {s.items.map((item) => (
-                  <li>{item}</li>
-                ))}
-              </ul>
-            </article>
+          cards.map((c) => (
+            <HowIWorkCard
+              title={c.step}
+              desc={c.desc}
+              items={c.items}
+              color={c.color}
+              border={c.border}
+            />
           ))
         }
       </div>
