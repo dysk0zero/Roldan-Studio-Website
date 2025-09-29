@@ -11,6 +11,43 @@
     "cta": "Projekt starten",
     "altImage": "Profilbild von Javier."
   },
+  "whatIDo": {
+    "header": {
+      "title": "Websites, optimiert für Geschwindigkeit, SEO und Barrierefreiheit.",
+      "subtitle": "Qualität ist meine Priorität Nr. 1."
+    },
+    "cards": [
+      {
+        "id": "01",
+        "title": "Design",
+        "desc": "100 % individuell, keine Vorlagen. Jede Website wird für Ihre Marke entworfen und sieht auf Mobilgeräten wie auch auf dem Desktop großartig aus.",
+        "colorBack": "rgba(109, 246, 255, 0.2)",
+        "colorMiddle": "rgba(208, 255, 244, 0.5)",
+        "gradientFront": "linear-gradient(129deg, rgba(9, 82, 98, 0.08) 44.04%, rgba(9, 82, 98, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(208, 255, 244, 0.25)"
+      },
+      {
+        "id": "02",
+        "title": "Performance",
+        "desc": "Schnelle, optimierte Websites, die vollständig Ihnen gehören. Wählen Sie Webflow oder individuellen Code – je nach Bedarf.",
+        "colorBack": "rgba(252, 109, 255, 0.2)",
+        "colorMiddle": "rgba(255, 208, 245, 0.5)",
+        "gradientFront": "linear-gradient(129deg, rgba(96, 9, 98, 0.08) 44.04%, rgba(98, 9, 78, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(255, 208, 242, 0.25)"
+      },
+      {
+        "id": "03",
+        "title": "SEO",
+        "desc": "Für SEO und Barrierefreiheit optimierte Websites. Leicht zu navigieren, suchmaschinenfreundlich und gebaut, um bei Google zu ranken.",
+        "colorBack": "rgba(235, 255, 109, 0.2)",
+        "colorMiddle": "rgba(255, 248, 208, 0.5)",
+        "gradientFront": "linear-gradient(129deg, rgba(96, 98, 9, 0.08) 44.04%, rgba(85, 98, 9, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(255, 245, 208, 0.25)"
+      }
+    ],
+    "section": {
+      "title": "Ich baue für Langlebigkeit.",
+      "text": "Eine gute Website sollte Ihnen jahrelang dienen. Ich folge Ihrer Vision, halte den Code sauber und verzichte auf Abkürzungen, damit Sie die volle Kontrolle haben, sie aktualisieren und weiter ausbauen können.",
+      "CTA": "Lassen Sie uns loslegen!"
+    }
+  },
   "services": {
     "header": "Transparente Preise in jedem Angebot",
     "static": {

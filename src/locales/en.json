@@ -11,8 +11,45 @@
     "cta": "Start a Project",
     "altImage": "Profile picture of Javier."
   },
+  "whatIDo": {
+    "header": {
+      "title": "Websites optimized for speed, SEO and accessibility.",
+      "subtitle": "Quality is my #1 priority."
+    },
+    "cards": [
+      {
+        "id": "01",
+        "title": "Design",
+        "desc": "100% custom, no templates. Every website is designed for your brand, and to look great on mobile and desktop.",
+        "colorBack": "rgba(109, 246, 255, 0.2)",
+        "colorMiddle": "rgba(208, 255, 244, 0.5)",
+        "gradientFront": "linear-gradient(129deg, rgba(9, 82, 98, 0.08) 44.04%, rgba(9, 82, 98, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(208, 255, 244, 0.25)"
+      },
+      {
+        "id": "02",
+        "title": "Performance",
+        "desc": "Fast and optimized websites you fully own. Choose Webflow or custom code, according to your needs.",        
+        "colorBack": "rgba(252, 109, 255, 0.2)",
+        "colorMiddle": "rgba(255, 208, 245, 0.5)",
+        "gradientFront": "linear-gradient(129deg, rgba(96, 9, 98, 0.08) 44.04%, rgba(98, 9, 78, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(255, 208, 242, 0.25)"
+      },
+      {
+        "id": "03",
+        "title": "SEO",
+        "desc": "Websites optimized for SEO and accessibility. Easy to navigate, search-friendly, and built to rank on Google.",        
+        "colorBack": "rgba(235, 255, 109, 0.2)",
+        "colorMiddle": "rgba(255, 248, 208, 0.5)",
+        "gradientFront": "linear-gradient(129deg, rgba(96, 98, 9, 0.08) 44.04%, rgba(85, 98, 9, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(255, 245, 208, 0.25)"
+      }
+    ],
+    "section": {
+      "title": "I build to last.",
+      "text": "A good website should serve you for years. I follow your vision, keep the code clean, and avoid shortcuts so you can own it, update it, and grow with it.",
+      "CTA": "Let's build!"
+    }
+  },
   "services": {
-    "header": "Transparent Pricing in Every Quote",
+    "header": "Transparent Pricing In Every Quote",
     "static": {
       "title": "Static Marketing Site",
       "subtitle": "The best option for simple sites that don't need monthly changes.",

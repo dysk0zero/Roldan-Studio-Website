@@ -11,10 +11,47 @@
     "cta": "Iniciar Proyecto",
     "altImage": "Foto de perfil de Javier."
   },
+  "whatIDo": {
+    "header": {
+      "title": "Sitios web optimizados para velocidad, SEO y accesibilidad.",
+      "subtitle": "La calidad es mi prioridad número 1."
+    },
+    "cards": [
+      {
+        "id": "01",
+        "title": "Diseño",
+        "desc": "100% personalizado, sin plantillas. Cada sitio web está diseñado para tu marca y para verse bien en móvil y ordenador.",
+        "colorBack": "rgba(109, 246, 255, 0.2)",
+        "colorMiddle": "rgba(208, 255, 244, 0.5)",
+        "gradientFront": "linear-gradient(129deg, rgba(9, 82, 98, 0.08) 44.04%, rgba(9, 82, 98, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(208, 255, 244, 0.25)"
+      },
+      {
+        "id": "02",
+        "title": "Rendimiento",
+        "desc": "Sitios web rápidos y optimizados que son completamente tuyos. Elige Webflow o código personalizado, según tus necesidades.",
+        "colorBack": "rgba(252, 109, 255, 0.2)",
+        "colorMiddle": "rgba(255, 208, 245, 0.5)",
+        "gradientFront": "linear-gradient(129deg, rgba(96, 9, 98, 0.08) 44.04%, rgba(98, 9, 78, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(255, 208, 242, 0.25)"
+      },
+      {
+        "id": "03",
+        "title": "SEO",
+        "desc": "Sitios web optimizados para SEO y accesibilidad. Fáciles de navegar y creados para posicionar en Google.",
+        "colorBack": "rgba(235, 255, 109, 0.2)",
+        "colorMiddle": "rgba(255, 248, 208, 0.5)",
+        "gradientFront": "linear-gradient(129deg, rgba(96, 98, 9, 0.08) 44.04%, rgba(85, 98, 9, 0.48) 73.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), rgba(255, 245, 208, 0.25)"
+      }
+    ],
+    "section": {
+      "title": "Construyo para durar.",
+      "text": "Un buen sitio web debe servirte durante años. Sigo tu visión, mantengo el código limpio y evito atajos para que puedas hacerlo tuyo, actualizarlo y crecer con él.",
+      "CTA": "¡Construyamos!"
+    }
+  },
   "services": {
-    "header": "Precios transparentes en cada presupuesto",
+    "header": "Precios Transparentes En Cada Presupuesto",
     "static": {
-      "title": "Sitio de marketing estático",
+      "title": "Web Marketing Estática",
       "subtitle": "La mejor opción para sitios sencillos que no necesitan cambios mensuales.",
       "cta": "¡Empecemos!",
       "isCustom": 0,
@@ -39,7 +76,7 @@
       "pricing": "Desde 1500 €"
     },
     "dynamic": {
-      "title": "Sitio de marketing dinámico",
+      "title": "Web Marketing Dinámica",
       "subtitle": "Perfecto para sitios que requieren cambios continuos o tiendas pequeñas.",
       "cta": "¡Construyámoslo!",
       "isCustom": 0,
@@ -66,7 +103,7 @@
       "pricing": "Desde 2500 €"
     },
     "custom": {
-      "title": "Aplicación web personalizada",
+      "title": "Aplicación Web Custom",
       "subtitle": "Para el desarrollo de aplicaciones web complejas o grandes sitios de comercio electrónico.",
       "cta": "Solicitar presupuesto",
       "isCustom": 1,
