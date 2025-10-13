@@ -175,5 +175,22 @@
     "listTitle3Custom": "Desarrollo",
     "listTitle3NotCustom": "Elige una",
     "listTitle4": "Precios"
+  },
+  "testimonies": {
+    "title": "De pequeños proyectos freelance a software corporativo.",
+    "cta": "Case Study",
+    "testimonies": [
+      {
+        "quote": "“Mi estilo salvaje necesitaba un enfoque diferente, un sitio web a la altura de esa energía. Javier supo entenderlo y entregó un producto completamente único.”",
+        "author": "Kenneth Anderson, Fotógrafo",
+        "link": "https://kennethandersonx.com/"
+      },
+      {
+        "quote": "“Javier empezó a trabajar con nosotros para apoyar a nuestro equipo de TI en nuestras distintas tiendas de comercio electrónico. Desarrollamos una relación duradera y siempre entregó a tiempo y con alta calidad.”",
+        "author": "CM Wedding GmbH",
+        "link": "https://hochzeitshaus.berlin/"
+      }
+    ]
   }
+
 }

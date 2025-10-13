@@ -1,5 +1,7 @@
 ---
-import { ArrowUpRight } from "@lucide/astro";
+import TestimoniesCard from "./TestimoniesCard.astro";
+
+const { t } = Astro.props;
 ---
 
 <div class="section-wrapper dark-bg">
@@ -15,58 +17,12 @@ import { ArrowUpRight } from "@lucide/astro";
         data-delay="0.3"
         class="opacity-0 font-bold text-3xl lg:text-5xl xl:text-6xl leading-tight text-left text-shadow-header-black"
       >
-        From small freelance work to enterprise software projects.
+        {t.title}
       </h2>
     </header>
     <div class="section-margin-bottom grid grid-cols-1 md:grid-cols-2">
-      <article
-        class="flex flex-col justify-between p-6 lg:p-8 gap-4 lg:gap-6 border-b border-white-line"
-      >
-        <p class="text-lg lg:text-xl italic leading-relaxed">
-          “My wild style needed a different approach, a website that matched
-          such energy. Javier was able to understand this and deliver a
-          completely unique product.”
-        </p>
-        <div class="flex items-center gap-8 justify-between">
-          <a
-            class="flex items-center whitespace-nowrap hover:text-gray-300"
-            rel="external"
-            href="https://kennethandersonx.com/"
-            target="_blank"
-            
-          >
-            <span class="font-medium lg:text-lg">Case Study</span>
-            <ArrowUpRight class="w-5 h-5 xl:w-6 xl:h-6 xl:stroke-[2.5]" />
-          </a>
-          <p class="font-light text-sm lg:text-base italic text-right">
-            Kenneth Anderson, Photographer
-          </p>
-        </div>
-      </article>
-      <article
-        class="flex flex-col justify-between p-6 lg:p-8 gap-5 lg:gap-6 md:border-l border-b border-white-line"
-      >
-        <p class="text-lg lg:text-xl italic leading-relaxed">
-          “Javier started working with us to help our IT team in our different
-          e-commerce stores. We developed a long-lasting relationship and he
-          always delivered on time and with high quality.”
-        </p>
-        <div class="flex items-center gap-8 justify-between">
-          <a
-            class="flex items-center whitespace-nowrap hover:text-gray-300"
-            rel="nofollow external"
-            href="https://hochzeitshaus.berlin/"
-            target="_blank"
-          >
-            <span class="font-medium lg:text-lg">Case Study</span>
-            <ArrowUpRight class="w-5 h-5 xl:w-6 xl:h-6 xl:stroke-[2.5]" />
-          </a>
-          <p class="font-light text-sm lg:text-base italic text-right">
-            CM Wedding GmbH
-          </p>
-        </div>
-      </article>
-      <div></div>
+      <TestimoniesCard quote={t.testimonies[0].quote} author={t.testimonies[0].author} link={t.testimonies[0].link} cta={t.cta} />
+      <TestimoniesCard quote={t.testimonies[1].quote} author={t.testimonies[1].author} link={t.testimonies[1].link} borderClass="md:border-l" cta={t.cta} />        
     </div>
   </section>
 </div>

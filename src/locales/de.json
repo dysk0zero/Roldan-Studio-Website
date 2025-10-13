@@ -175,5 +175,21 @@
     "listTitle3Custom": "Entwicklung",
     "listTitle3NotCustom": "Eine Option wählen",
     "listTitle4": "Preise"
+  },
+  "testimonies": {
+    "title": "Von kleinen Freelance-Aufträgen bis hin zu Enterprise-Softwareprojekten.",
+    "cta": "Fallstudie",
+    "testimonies": [
+      {
+        "quote": "„Mein wilder Stil brauchte einen anderen Ansatz, eine Website, die dieser Energie entspricht. Javier hat das verstanden und ein völlig einzigartiges Produkt geliefert.“",
+        "author": "Kenneth Anderson, Fotograf",
+        "link": "https://kennethandersonx.com/"
+      },
+      {
+        "quote": "„Javier begann mit uns zusammenzuarbeiten, um unser IT-Team in unseren verschiedenen E-Commerce-Shops zu unterstützen. Wir haben eine langfristige Zusammenarbeit aufgebaut, und er lieferte stets pünktlich und in hoher Qualität.“",
+        "author": "CM Wedding GmbH",
+        "link": "https://hochzeitshaus.berlin/"
+      }
+    ]
   }
 }

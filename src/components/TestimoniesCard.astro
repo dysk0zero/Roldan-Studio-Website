@@ -1,0 +1,34 @@
+---
+import { ArrowUpRight } from "@lucide/astro";
+
+interface Props {
+  quote: string;
+  author: string;
+  link: string;
+  cta: string;
+  borderClass?: string;
+}
+
+const { quote, author, link, cta, borderClass } = Astro.props as Props;
+---
+<article
+  class={`flex flex-col justify-between p-6 lg:p-8 gap-4 lg:gap-6 border-b border-white-line ${borderClass}`}
+>
+  <p class="text-lg lg:text-xl italic leading-relaxed">
+    {quote}
+  </p>
+  <div class="flex items-center gap-8 justify-between">
+    <a
+      class="flex items-center whitespace-nowrap hover:text-gray-300"
+      rel="external"
+      href={link}
+      target="_blank"
+    >
+      <span class="font-medium lg:text-lg">{cta}</span>
+      <ArrowUpRight class="w-5 h-5 xl:w-6 xl:h-6 xl:stroke-[2.5]" />
+    </a>
+    <p class="font-light text-sm lg:text-base italic text-right">
+    {author}  
+    </p>
+  </div>
+</article>
