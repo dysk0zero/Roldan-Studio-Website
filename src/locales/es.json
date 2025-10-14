@@ -100,6 +100,35 @@
       }
     ]
   },
+  "manifest": {
+    "title": "Mis valores fundamentales",
+    "cards": [
+      {
+        "title": "Construido para durar",
+        "desc": "Sitios web hechos con código limpio, alto rendimiento y escalabilidad en mente. Sirven a tu negocio durante años, no meses."
+      },
+      {
+        "title": "Artesanía antes que atajos",
+        "desc": "Sin plantillas ni parches rápidos. Cada proyecto se diseña y se desarrolla como es debido, con cuidado y atención al detalle."
+      },
+      {
+        "title": "Proceso transparente",
+        "desc": "Todo está claro desde el primer día: contrato, alcance y tarifas. Siempre sabes en qué punto estamos."
+      },
+      {
+        "title": "Visibilidad total",
+        "desc": "Puedes seguir todo el proceso en tiempo real en un documento de Notion. Tareas, cronogramas y avances en un solo lugar."
+      },
+      {
+        "title": "100 % tuyo",
+        "desc": "Al lanzar, todo es tuyo: el código, el contenido y el hosting. Sin ataduras."
+      },
+      {
+        "title": "Alianza",
+        "desc": "Valoro las relaciones duraderas. Recibes soporte y guía más allá del lanzamiento, no solo una entrega rápida."
+      }
+    ]
+  },
   "services": {
     "header": "Precios Transparentes En Cada Presupuesto",
     "static": {

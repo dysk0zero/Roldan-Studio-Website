@@ -100,6 +100,35 @@
       }
     ]
   },
+  "manifest": {
+    "title": "My Core Values",
+    "cards": [
+      {
+        "title": "Built to Last",
+        "desc": "Websites made with clean code, strong performance, and scalability in mind. They serve your business for years, not months."
+      },
+      {
+        "title": "Craft Over Shortcuts",
+        "desc": "No templates, no quick fixes. Every project is designed and developed properly, with care and attention to detail."
+      },
+      {
+        "title": "Transparent Process",
+        "desc": "Everything is clear from day one: contract, scope, and fees. You always know where we stand."
+      },
+      {
+        "title": "Full Visibility",
+        "desc": "You can follow the entire process in real time in a Notion document. Tasks, timelines, and progress all in one place."
+      },
+      {
+        "title": "100% Yours",
+        "desc": "When we launch, you own everything: the code, the content, and the hosting. No lock-ins."
+      },
+      {
+        "title": "Partnership",
+        "desc": "I value lasting relationships. You get support and guidance beyond launch, not just a quick hand-off."
+      }
+    ]
+  },
   "services": {
     "header": "Transparent Pricing In Every Quote",
     "static": {

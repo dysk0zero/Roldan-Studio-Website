@@ -100,6 +100,35 @@
       }
     ]
   },
+  "manifest": {
+    "title": "Meine Grundwerte",
+    "cards": [
+      {
+        "title": "Auf Langlebigkeit gebaut",
+        "desc": "Websites mit sauberem Code, hoher Performance und Skalierbarkeit. Sie dienen Ihrem Unternehmen über Jahre, nicht nur Monate."
+      },
+      {
+        "title": "Handwerk statt Abkürzungen",
+        "desc": "Keine Templates, keine Schnelllösungen. Jedes Projekt wird sorgfältig konzipiert und entwickelt – mit Liebe zum Detail."
+      },
+      {
+        "title": "Transparenter Prozess",
+        "desc": "Von Tag eins ist alles klar: Vertrag, Umfang und Kosten. Sie wissen jederzeit, wo wir stehen."
+      },
+      {
+        "title": "Volle Transparenz",
+        "desc": "Sie können den gesamten Prozess in Echtzeit in einem Notion-Dokument verfolgen. Aufgaben, Zeitpläne und Fortschritt an einem Ort."
+      },
+      {
+        "title": "100 % Ihr Eigentum",
+        "desc": "Beim Launch gehört Ihnen alles: Code, Inhalte und Hosting. Kein Vendor-Lock-in."
+      },
+      {
+        "title": "Partnerschaft",
+        "desc": "Ich setze auf langfristige Beziehungen. Sie erhalten Support und Beratung über den Launch hinaus, nicht nur eine schnelle Übergabe."
+      }
+    ]
+  },
   "services": {
     "header": "Transparente Preise in jedem Angebot",
     "static": {
