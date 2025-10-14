@@ -191,6 +191,14 @@
         "link": "https://hochzeitshaus.berlin/"
       }
     ]
+  },
+  "contact": {
+    "title": "¿Tienes un proyecto en marcha?",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Cuéntame un poco sobre tu proyecto...",
+      "cta": "Enviar"
+    }
   }
-
 }

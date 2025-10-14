@@ -45,7 +45,7 @@
     "section": {
       "title": "Ich baue für Langlebigkeit.",
       "text": "Eine gute Website sollte Ihnen jahrelang dienen. Ich folge Ihrer Vision, halte den Code sauber und verzichte auf Abkürzungen, damit Sie die volle Kontrolle haben, sie aktualisieren und weiter ausbauen können.",
-      "CTA": "Lassen Sie uns loslegen!"
+      "CTA": "Loslegen!"
     }
   },
   "howIWork": {
@@ -191,5 +191,14 @@
         "link": "https://hochzeitshaus.berlin/"
       }
     ]
+  },
+  "contact": {
+    "title": "Ein Projekt in der Pipeline?",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Erzählen Sie mir kurz etwas über Ihr Projekt...",
+      "cta": "Absenden"
+    }
   }
 }

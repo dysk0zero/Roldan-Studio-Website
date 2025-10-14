@@ -191,5 +191,14 @@
         "link": "https://hochzeitshaus.berlin/"
       }
     ]
+  },
+  "contact": {
+    "title": "Got a project in the pipeline?",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Tell me a bit about your project...",
+      "cta": "Submit"
+    }
   }
 }
