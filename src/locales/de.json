@@ -3,7 +3,18 @@
     "title": "Roldan Studio - Freelance Webdesigner & Entwickler",
     "description": "Steigere dein Business mit schnellen und optimierten Websites, ohne monatliche Gebühren und mit messbaren Ergebnissen. Sauberes Design, echte Performance.",
     "url": "https://jbroldan.dev/de",
-    "lang": "de"
+    "lang": "de",
+    "header": {
+      "nav": [
+        { "href": "#WhatIDo", "name": "was ich mache" },
+        { "href": "#HowIWork", "name": "wie ich arbeite" },
+        { "href": "#Manifest", "name": "manifest" },
+        { "href": "#Services", "name": "leistungen" },
+        { "href": "#Testimonies", "name": "kundenstimmen" },
+        { "href": "#Contact", "name": "kontakt" }
+      ],
+      "cta": "Projekt Starten"
+    }
   },
   "hero": {
     "title": "Hi! Ich bin Javi",

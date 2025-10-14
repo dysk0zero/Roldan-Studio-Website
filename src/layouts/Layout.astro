@@ -21,7 +21,7 @@ const { t } = Astro.props;
     <link rel="alternate" hreflang="de" href="https://jbroldan.dev/de" />
   </head>
   <body class="text-white">
-    <Header />
+    <Header t={t.header} />
     <main class="flex flex-col items-center">
       <slot />
     </main>
