@@ -1,0 +1,18 @@
+---
+const { t } = Astro.props;
+---
+<nav class="hidden lg:block">
+  <ul
+    class="flex flex-col lg:flex-row list-none w-full justify-center text-sm xl:text-base gap-6"
+  >
+    {
+      t.map(
+        (c: { href: string | URL | null | undefined; name: unknown }) => (
+          <li>
+            <a href={c.href}>{c.name}</a>
+          </li>
+        )
+      )
+    }
+  </ul>
+</nav>

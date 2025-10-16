@@ -1,7 +1,8 @@
 ---
-import { ArrowRight } from "@lucide/astro";
+import { ArrowRight, Menu } from "@lucide/astro";
 import Logo from "../assets/Logo.svg";
 import LanguageToggle from "./LanguageToggle.astro";
+import Navigation from "./Navigation.astro";
 
 const { t } = Astro.props;
 ---
@@ -17,25 +18,13 @@ const { t } = Astro.props;
           <Logo class="h-7 lg:h-8 xl:h-9 w-auto" />
         </div>
       </a>
-      <nav class="hidden lg:flex">
-        <ul class="lg:flex list-none w-full justify-center text-sm xl:text-base gap-6">
-          {
-            t.nav.map(
-              (c: { href: string | URL | null | undefined; name: unknown }) => (
-                <li>
-                  <a href={c.href}>{c.name}</a>
-                </li>
-              )
-            )
-          }
-        </ul>
-      </nav>
-      <div class="flex items-center gap-4">
+      <Navigation t={t.nav} />
+      <div class="flex items-center gap-4 md:gap-5 xl:gap-6">
         <span class="hidden md:block"> <LanguageToggle /> </span>
         <a
           role="button"
           href="#Services"
-          class="group flex gap-1 px-2 lg:px-3 py-1 lg:py-2 items-center rounded-xl bg-white hover:bg-offwhite active:bg-white-blue border border-gray-blue/50 whitespace-nowrap"
+          class="group flex gap-1 px-2 md:px-3 py-1 md:py-2 items-center rounded-xl bg-white hover:bg-offwhite active:bg-white-blue border border-gray-blue/50 whitespace-nowrap"
         >
           <span class="hidden md:block font-medium text-black">{t.cta.desktop}</span>
           <span class="md:hidden font-medium text-black">{t.cta.mobile}</span>
@@ -43,6 +32,9 @@ const { t } = Astro.props;
             class="h-4 w-4 stroke-[2.5] lg:stroke-3 text-black transition-transform duration-300 group-hover:translate-x-1.5"
           />
         </a>
+        <span class="lg:hidden"> 
+          <Menu class="h-7 w-auto" />
+        </span>
       </div>
     </div>
   </div>
