@@ -1,0 +1,23 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<nav aria-label="Language Toggle">
+  <ul class="flex gap-2 text-sm">
+    {currentPath !== '/en' && (
+      <li>
+        <a href="/en" lang="en" hreflang="en">EN</a>
+      </li>
+    )}
+    {currentPath !== '/es' && (
+      <li>
+        <a href="/es" lang="es" hreflang="es">ES</a>
+      </li>
+    )}
+    {currentPath !== '/de' && (
+      <li>
+        <a href="/de" lang="de" hreflang="de">DE</a>
+      </li>
+    )}
+  </ul>
+</nav>

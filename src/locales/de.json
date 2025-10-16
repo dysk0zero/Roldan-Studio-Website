@@ -13,7 +13,10 @@
         { "href": "#Testimonies", "name": "kundenstimmen" },
         { "href": "#Contact", "name": "kontakt" }
       ],
-      "cta": "Projekt Starten"
+      "cta": {
+        "desktop": "Projekt Starten",
+        "mobile": "Kontakt"
+      }
     }
   },
   "hero": {

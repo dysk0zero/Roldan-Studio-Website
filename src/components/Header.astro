@@ -1,6 +1,7 @@
 ---
 import { ArrowRight } from "@lucide/astro";
 import Logo from "../assets/Logo.svg";
+import LanguageToggle from "./LanguageToggle.astro";
 
 const { t } = Astro.props;
 ---
@@ -13,30 +14,36 @@ const { t } = Astro.props;
     <div class="flex w-full py-4 px-1 max-h-16 justify-between items-center">
       <a href="/" aria-label="Home" class="flex items-center">
         <div class="logo-shimmer group">
-          <Logo class="h-9 w-auto" />
+          <Logo class="h-7 lg:h-8 xl:h-9 w-auto" />
         </div>
       </a>
-      <nav class="hidden lg:flex w-full">
-        <ul class="lg:flex list-none w-full justify-center gap-6">
+      <nav class="hidden lg:flex">
+        <ul class="lg:flex list-none w-full justify-center text-sm xl:text-base gap-6">
           {
-            t.nav.map((c: { href: string | URL | null | undefined; name: unknown; }) => (
-              <li>
-                <a href={c.href}>{c.name}</a>
-              </li>
-            ))
+            t.nav.map(
+              (c: { href: string | URL | null | undefined; name: unknown }) => (
+                <li>
+                  <a href={c.href}>{c.name}</a>
+                </li>
+              )
+            )
           }
         </ul>
       </nav>
-      <a
-        role="button"
-        href="#Services"
-        class="group flex gap-1 px-3 py-2 items-center rounded-xl bg-white hover:bg-offwhite active:bg-white-blue border border-gray-blue/50 whitespace-nowrap"
-      >
-        <span class="font-medium text-black">{t.cta}</span>
-        <ArrowRight
-          class="h-4 w-4 stroke-[2.5] lg:stroke-3 text-black transition-transform duration-300 group-hover:translate-x-1.5"
-        />
-      </a>
+      <div class="flex items-center gap-4">
+        <span class="hidden md:block"> <LanguageToggle /> </span>
+        <a
+          role="button"
+          href="#Services"
+          class="group flex gap-1 px-2 lg:px-3 py-1 lg:py-2 items-center rounded-xl bg-white hover:bg-offwhite active:bg-white-blue border border-gray-blue/50 whitespace-nowrap"
+        >
+          <span class="hidden md:block font-medium text-black">{t.cta.desktop}</span>
+          <span class="md:hidden font-medium text-black">{t.cta.mobile}</span>
+          <ArrowRight
+            class="h-4 w-4 stroke-[2.5] lg:stroke-3 text-black transition-transform duration-300 group-hover:translate-x-1.5"
+          />
+        </a>
+      </div>
     </div>
   </div>
 </header>

@@ -1,0 +1,24 @@
+---
+import Contact from "../../components/Contact.astro";
+import Hero from "../../components/Hero.astro";
+import HowIWork from "../../components/HowIWork.astro";
+import Manifest from "../../components/Manifest.astro";
+import Services from "../../components/Services.astro";
+import Testimonies from "../../components/Testimonies.astro";
+import WhatIDo from "../../components/WhatIDo.astro";
+import Layout from "../../layouts/Layout.astro";
+
+import en from "../../locales/en.json";
+
+export const prerender = false;
+---
+
+<Layout t={en.layout} >
+  <Hero t={en.hero} />
+  <WhatIDo t={en.whatIDo} cards={en.whatIDo.cards} />
+  <HowIWork t={en.howIWork} cards={en.howIWork.cards} />
+  <Manifest t={en.manifest} cards={en.manifest.cards} />
+  <Services t={en.services} cardDividers={en.serviceCard} />
+  <Testimonies t={en.testimonies} />
+  <Contact t={en.contact} />
+</Layout>
