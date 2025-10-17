@@ -22,12 +22,12 @@ const { t } = Astro.props;
     <link rel="alternate" hreflang="de" href="https://jbroldan.dev/de" />
   </head>
   <body class="text-white">
-    <Header t={t.header} />
-    <main class="flex flex-col items-center">
-      <ObserverProvider client:load>
+    <ObserverProvider client:load>
+      <Header t={t.header} />
+      <main class="flex flex-col items-center">
         <slot />
-      </ObserverProvider>
-    </main>
+      </main>
+    </ObserverProvider>
     <Footer />
   </body>
 </html>
