@@ -4,6 +4,7 @@ import Logo from "../assets/Logo.svg";
 import LanguageToggle from "./LanguageToggle.astro";
 import Navigation from "./Navigation.astro";
 import MobileMenu from "./MobileMenu.astro";
+import HeaderObserver from "./HeaderObserver";
 
 const currentPath = Astro.url.pathname;
 
@@ -28,7 +29,7 @@ let isMenuOpen = false;
         <a
           role="button"
           href="#Services"
-          class="group flex gap-1 px-2 py-1.5 items-center rounded-xl bg-white hover:bg-offwhite active:bg-white-blue border border-gray-blue/50 whitespace-nowrap"
+          class="group flex gap-1 px-2 py-1.5 xl:px-3 xl:py-2 items-center rounded-xl bg-white hover:bg-offwhite active:bg-white-blue border border-gray-blue/50 whitespace-nowrap"
         >
           <span class="hidden md:block font-medium text-sm xl:text-base text-black"
             >{t.cta.desktop}</span
@@ -72,52 +73,8 @@ let isMenuOpen = false;
     overlay.classList.toggle("hidden");
   }
 
+  // Close mobile menu when clicking hash links
   document.addEventListener("DOMContentLoaded", () => {
-    const header = document.getElementById("site-header");
-    const sections = document.querySelectorAll(".light-bg, .dark-bg");
-
-    if (header && sections.length) {
-      const setMode = (isLight) => {
-        header.classList.remove("light-header", "dark-header");
-        header.classList.add(isLight ? "light-header" : "dark-header");
-      };
-
-      const mid = window.innerHeight / 2;
-      const initial = [...sections].find((el) => {
-        const r = el.getBoundingClientRect();
-        return r.top <= mid && r.bottom >= mid;
-      });
-      if (initial) setMode(initial.classList.contains("light-bg"));
-
-      const vw = window.innerWidth;
-      let threshold;
-
-      if (vw < 1024) {
-        threshold = 0.2;
-      } else if (vw < 1640) {
-        threshold = 0.45;
-      } else {
-        threshold = 0.6;
-      }
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setMode(entry.target.classList.contains("light-bg"));
-            }
-          });
-        },
-        {
-          threshold,
-          rootMargin: `-${header.offsetHeight}px 0px 0px 0px`,
-        }
-      );
-
-      sections.forEach((s) => observer.observe(s));
-    }
-
-    // Close mobile menu when clicking hash links
     const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
     if (mobileMenuOverlay) {
       mobileMenuOverlay.addEventListener("click", (event) => {

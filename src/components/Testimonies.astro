@@ -13,9 +13,7 @@ const { t } = Astro.props;
       class="section-header section-margin-top border-y border-white-line scroll-mt-16"
     >
       <h2
-        data-animate-right
-        data-delay="0.3"
-        class="opacity-0 font-bold text-3xl lg:text-5xl xl:text-6xl leading-tight text-left text-shadow-header-black"
+        class="motion-preset-slide-up-lg motion-duration-[2s] font-bold text-3xl lg:text-5xl xl:text-6xl leading-tight text-left text-shadow-header-black intersect:motion-opacity-in intersect-delay-300"
       >
         {t.title}
       </h2>

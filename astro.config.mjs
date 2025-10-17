@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
-import vercel from "@astrojs/vercel/serverless";
 import sitemap from "@astrojs/sitemap";
+import react from "@astrojs/react";
 
 export default defineConfig({
   site: "https://jbroldan.dev",
@@ -14,8 +14,8 @@ export default defineConfig({
       redirectToDefaultLocale: true, 
     },
   },
-  middleware: true,
-  integrations: [sitemap()],
+  middleware: false,
+  integrations: [sitemap(), react()],
   vite: {
     plugins: [tailwindcss()],
     server: {
@@ -33,6 +33,5 @@ export default defineConfig({
   build: {
     inlineStylesheets: "auto",
   },
-  output: "server",
-  adapter: vercel(),
+  output: "static",
 });
