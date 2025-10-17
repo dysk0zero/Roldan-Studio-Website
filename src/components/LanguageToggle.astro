@@ -16,7 +16,7 @@ const { classNav, classItem } = Astro.props;
 ---
 
 <nav aria-label="Language Toggle" class={`${classNav}`}>
-  <ul class="flex gap-2 text-sm justify-center">
+  <ul class="flex gap-4 lg:gap-2 text-sm justify-center">
     {languages.map((lang) =>
       currentPath !== lang.path && (
         <li>

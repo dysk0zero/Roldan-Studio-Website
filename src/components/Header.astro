@@ -116,5 +116,16 @@ let isMenuOpen = false;
 
       sections.forEach((s) => observer.observe(s));
     }
+
+    // Close mobile menu when clicking hash links
+    const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+    if (mobileMenuOverlay) {
+      mobileMenuOverlay.addEventListener("click", (event) => {
+        const anchor = event.target.closest("a");
+        if (anchor && anchor.href && anchor.href.startsWith("#")) {
+          toggleMobileMenu();
+        }
+      });
+    }
   });
 </script>
