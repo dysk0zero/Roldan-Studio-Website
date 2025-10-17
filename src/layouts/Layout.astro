@@ -24,7 +24,7 @@ const { t } = Astro.props;
   </head>
   <body class="text-white">
     <Header t={t.header} />
-    <HeaderThemeWatcher client:load />
+    <HeaderThemeWatcher client:idle />
     <ObserverProvider client:idle>
       <main class="flex flex-col items-center">
         <slot />
