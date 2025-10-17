@@ -231,11 +231,11 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    box-shadow: 0 0 8px 0 rgba(250, 250, 250, 0.2); /* outline + shadow */
+    box-shadow: 0 0 8px 0 rgba(250, 250, 250, 0.2);
     transition: box-shadow 0.3s ease;
     border-radius: 12px;
   }
   .outline-shadow-card:hover::before {
-    box-shadow: 0 0 12px 0 rgba(250, 250, 250, 0.3); /* stronger on hover */
+    box-shadow: 0 0 12px 0 rgba(250, 250, 250, 0.3);
   }
 }

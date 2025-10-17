@@ -2,6 +2,7 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import ObserverProvider from "../components/ObserverProvider";
+import HeaderThemeWatcher from "../components/ObserverHeader";
 import "../styles/global.css";
 
 const { t } = Astro.props;
@@ -22,8 +23,9 @@ const { t } = Astro.props;
     <link rel="alternate" hreflang="de" href="https://jbroldan.dev/de" />
   </head>
   <body class="text-white">
-    <ObserverProvider client:load>
-      <Header t={t.header} />
+    <Header t={t.header} />
+    <HeaderThemeWatcher client:load />
+    <ObserverProvider client:idle>
       <main class="flex flex-col items-center">
         <slot />
       </main>

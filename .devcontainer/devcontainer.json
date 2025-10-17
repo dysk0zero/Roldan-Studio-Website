@@ -12,5 +12,10 @@
         "bradlc.vscode-tailwindcss"
       ]
     }
+  },
+  "containerEnv": {
+    "PUPPETEER_EXECUTABLE_PATH": "/usr/bin/chromium",
+    "PUPPETEER_SKIP_DOWNLOAD": "true",
+    "PUPPETEER_ARGS": "--no-sandbox --disable-setuid-sandbox"
   }
 }

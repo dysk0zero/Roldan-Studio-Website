@@ -3,18 +3,17 @@ import HowIWorkCard from "./HowIWorkCard.astro";
 
 const { t } = Astro.props;
 
-const cards: { 
-  step: string; 
-  desc: string; 
-  items: string[]; 
-  color: string; 
-  border?: string; 
-}[] = Astro.props.cards
+const cards: {
+  step: string;
+  desc: string;
+  items: string[];
+  color: string;
+  border?: string;
+}[] = Astro.props.cards;
 ---
 
 <div class="w-full light-bg bg-white">
   <div class="section-wrapper relative isolate overflow-hidden text-black">
-    <!-- Real Content -->
     <section
       class="flex flex-col w-full items-center border-x border-black-line"
     >

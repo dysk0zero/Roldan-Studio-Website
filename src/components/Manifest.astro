@@ -24,11 +24,10 @@ const icons = [Shield, PenTool, Map, PanelsTopLeft, Key, Users];
       class="section-margin-bottom grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full p-6 md:p-8 gap-6 md:gap-8 border-b border-white-line"
     >
       {
-        t.cards.map((c: { title: string; desc: string; }, index: number) => (
+        t.cards.map((c: { title: string; desc: string }, index: number) => (
           <ManifestCard title={c.title} desc={c.desc} icon={icons[index]} />
         ))
       }
     </div>
   </section>
 </div>
-
