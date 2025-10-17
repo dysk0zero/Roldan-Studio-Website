@@ -5,7 +5,7 @@ import Navigation from "./Navigation.astro";
 const { t } = Astro.props;
 ---
 
-<aside class="flex flex-col justify-center items-center gap-16 mt-16">
-  <LanguageToggle classItem="hover:text-hover-nav text-base active:text-hover-nav" />
-  <Navigation t={t.nav} classNav="flex" classList="gap-8 text-center text-xl" classItem="hover:text-hover-nav active:text-hover-nav" />
+<aside class="flex flex-col justify-center items-center gap-10 mt-24">
+  <LanguageToggle classItem="hover:text-hover-nav text-lg active:text-hover-nav" />
+  <Navigation t={t.nav} classNav="flex" classList="gap-10 text-center text-2xl tracking-wide" classItem="hover:text-hover-nav active:text-hover-nav" />
 </aside>

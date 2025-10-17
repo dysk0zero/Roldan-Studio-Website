@@ -122,7 +122,7 @@ let isMenuOpen = false;
     if (mobileMenuOverlay) {
       mobileMenuOverlay.addEventListener("click", (event) => {
         const anchor = event.target.closest("a");
-        if (anchor && anchor.href && anchor.href.startsWith("#")) {
+        if (anchor && anchor.hash) {
           toggleMobileMenu();
         }
       });
