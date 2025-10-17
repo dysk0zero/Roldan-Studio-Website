@@ -23,7 +23,11 @@ let isMenuOpen = false;
           <Logo class="h-7 lg:h-8 xl:h-9 w-auto" />
         </div>
       </a>
-      <Navigation t={t.nav} classNav="hidden lg:block" classList="text-sm xl:text-base"/>
+      <Navigation
+        t={t.nav}
+        classNav="hidden lg:block"
+        classList="text-sm xl:text-base"
+      />
       <div class="flex items-center gap-4 xl:gap-6">
         <LanguageToggle classNav="hidden lg:block" />
         <a
@@ -31,10 +35,13 @@ let isMenuOpen = false;
           href="#Services"
           class="group flex gap-1 px-2 py-1.5 xl:px-3 xl:py-2 items-center rounded-xl bg-white hover:bg-offwhite active:bg-white-blue border border-gray-blue/50 whitespace-nowrap"
         >
-          <span class="hidden md:block font-medium text-sm xl:text-base text-black"
+          <span
+            class="hidden md:block font-medium text-sm xl:text-base text-black"
             >{t.cta.desktop}</span
           >
-          <span class="md:hidden font-medium text-sm text-black">{t.cta.mobile}</span>
+          <span class="md:hidden font-medium text-sm text-black"
+            >{t.cta.mobile}</span
+          >
           <ArrowRight
             class="h-4 w-4 stroke-[2.5] lg:stroke-3 text-black transition-transform duration-300 group-hover:translate-x-1.5"
           />
@@ -72,6 +79,52 @@ let isMenuOpen = false;
     const overlay = document.getElementById("mobile-menu-overlay");
     overlay.classList.toggle("hidden");
   }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const header = document.getElementById("site-header");
+    const sections = document.querySelectorAll(".light-bg, .dark-bg");
+
+    if (header && sections.length) {
+      const setMode = (isLight) => {
+        header.classList.remove("light-header", "dark-header");
+        header.classList.add(isLight ? "light-header" : "dark-header");
+      };
+
+      const mid = window.innerHeight / 2;
+      const initial = [...sections].find((el) => {
+        const r = el.getBoundingClientRect();
+        return r.top <= mid && r.bottom >= mid;
+      });
+      if (initial) setMode(initial.classList.contains("light-bg"));
+
+      const vw = window.innerWidth;
+      let threshold;
+
+      if (vw < 1024) {
+        threshold = 0.2;
+      } else if (vw < 1640) {
+        threshold = 0.45;
+      } else {
+        threshold = 0.6;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setMode(entry.target.classList.contains("light-bg"));
+            }
+          });
+        },
+        {
+          threshold,
+          rootMargin: `-${header.offsetHeight}px 0px 0px 0px`,
+        }
+      );
+
+      sections.forEach((s) => observer.observe(s));
+    }
+  });
 
   document.addEventListener("DOMContentLoaded", () => {
     const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
