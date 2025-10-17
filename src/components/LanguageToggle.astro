@@ -1,23 +1,28 @@
 ---
 const currentPath = Astro.url.pathname;
+
+interface Props {
+  classNav?: string;
+  classItem?: string;
+}
+
+const languages = [
+  { path: "/en", code: "en", label: "EN" },
+  { path: "/de", code: "de", label: "DE" },
+  { path: "/es", code: "es", label: "ES" }
+];
+
+const { classNav, classItem } = Astro.props;
 ---
 
-<nav aria-label="Language Toggle">
-  <ul class="flex gap-2 text-sm">
-    {currentPath !== '/en' && (
-      <li>
-        <a href="/en" lang="en" hreflang="en">EN</a>
-      </li>
-    )}
-    {currentPath !== '/es' && (
-      <li>
-        <a href="/es" lang="es" hreflang="es">ES</a>
-      </li>
-    )}
-    {currentPath !== '/de' && (
-      <li>
-        <a href="/de" lang="de" hreflang="de">DE</a>
-      </li>
+<nav aria-label="Language Toggle" class={`${classNav}`}>
+  <ul class="flex gap-2 text-sm justify-center">
+    {languages.map((lang) =>
+      currentPath !== lang.path && (
+        <li>
+          <a href={lang.path} lang={lang.code} hreflang={lang.code} class={`${classItem}`}>{lang.label}</a>
+        </li>
+      )
     )}
   </ul>
 </nav>

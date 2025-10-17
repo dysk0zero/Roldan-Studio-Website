@@ -1,11 +1,11 @@
 ---
 import LanguageToggle from "./LanguageToggle.astro";
 import Navigation from "./Navigation.astro";
+
+const { t } = Astro.props;
 ---
 
-<aside class="flex justify-center items-center">
-  <div>
-    <LanguageToggle />
-    <Navigation />
-  </div>
+<aside class="flex flex-col justify-center items-center gap-6 mt-24">
+  <LanguageToggle classItem="hover:text-black-hover text-base" />
+  <Navigation t={t.nav} classNav="flex" classList="text-center text-lg" classItem="hover:text-black-hover" />
 </aside>

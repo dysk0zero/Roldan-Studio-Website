@@ -1,18 +1,26 @@
 ---
-const { t } = Astro.props;
+interface Props {
+  t: any;
+  classNav?: string;
+  classList?: string;
+  classItem?: string;
+}
+const { t, classNav, classList, classItem } = Astro.props;
 ---
-<nav class="hidden lg:block">
+<nav class={`${classNav}`}>
   <ul
-    class="flex flex-col lg:flex-row list-none w-full justify-center text-sm xl:text-base gap-6"
+    class={`flex flex-col lg:flex-row list-none w-full justify-center gap-4 xl:gap-6 ${classList}`}
   >
     {
-      t.map(
-        (c: { href: string | URL | null | undefined; name: unknown }) => (
-          <li>
-            <a href={c.href}>{c.name}</a>
-          </li>
+      t && Array.isArray(t) ? (
+        t.map(
+          (c: { href: string | URL | null | undefined; name: unknown }) => (
+            <li>
+              <a href={c.href} class={`${classItem}`}>{c.name}</a>
+            </li>
+          )
         )
-      )
+      ) : null
     }
   </ul>
 </nav>

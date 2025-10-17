@@ -235,16 +235,4 @@
   .outline-shadow-card:hover::before {
     box-shadow: 0 0 12px 0 rgba(250, 250, 250, 0.3); /* stronger on hover */
   }
-  --animate-fade-in-left: fade-in-left 0.6s ease-out both;
-
-  @keyframes fade-in-left {
-    from {
-      opacity: 0;
-      transform: translateX(-0.75rem);
-    } /* ~ -12px */
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
 }

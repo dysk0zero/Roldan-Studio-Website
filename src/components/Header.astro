@@ -1,10 +1,14 @@
 ---
-import { ArrowRight, Menu } from "@lucide/astro";
+import { ArrowRight, Menu, X } from "@lucide/astro";
 import Logo from "../assets/Logo.svg";
 import LanguageToggle from "./LanguageToggle.astro";
 import Navigation from "./Navigation.astro";
+import MobileMenu from "./MobileMenu.astro";
+
+const currentPath = Astro.url.pathname;
 
 const { t } = Astro.props;
+let isMenuOpen = false;
 ---
 
 <header
@@ -13,34 +17,61 @@ const { t } = Astro.props;
 >
   <div class="section-wrapper">
     <div class="flex w-full py-4 px-1 max-h-16 justify-between items-center">
-      <a href="/" aria-label="Home" class="flex items-center">
+      <a href={currentPath} aria-label="Home" class="flex items-center">
         <div class="logo-shimmer group">
           <Logo class="h-7 lg:h-8 xl:h-9 w-auto" />
         </div>
       </a>
-      <Navigation t={t.nav} />
-      <div class="flex items-center gap-4 md:gap-5 xl:gap-6">
-        <span class="hidden md:block"> <LanguageToggle /> </span>
+      <Navigation t={t.nav} classNav="hidden lg:block" classList="text-sm xl:text-base"/>
+      <div class="flex items-center gap-4 xl:gap-6">
+        <LanguageToggle classNav="hidden lg:block" />
         <a
           role="button"
           href="#Services"
-          class="group flex gap-1 px-2 md:px-3 py-1 md:py-2 items-center rounded-xl bg-white hover:bg-offwhite active:bg-white-blue border border-gray-blue/50 whitespace-nowrap"
+          class="group flex gap-1 px-2 py-1.5 items-center rounded-xl bg-white hover:bg-offwhite active:bg-white-blue border border-gray-blue/50 whitespace-nowrap"
         >
-          <span class="hidden md:block font-medium text-black">{t.cta.desktop}</span>
-          <span class="md:hidden font-medium text-black">{t.cta.mobile}</span>
+          <span class="hidden md:block font-medium text-sm xl:text-base text-black"
+            >{t.cta.desktop}</span
+          >
+          <span class="md:hidden font-medium text-sm text-black">{t.cta.mobile}</span>
           <ArrowRight
             class="h-4 w-4 stroke-[2.5] lg:stroke-3 text-black transition-transform duration-300 group-hover:translate-x-1.5"
           />
         </a>
-        <span class="lg:hidden"> 
-          <Menu class="h-7 w-auto" />
-        </span>
+        <button
+          type="button"
+          class="lg:hidden"
+          aria-label="open-menu"
+          onclick="toggleMobileMenu()"
+        >
+          <Menu class="h-8 md:h-10 w-auto" />
+        </button>
       </div>
     </div>
   </div>
 </header>
 
+<div
+  id="mobile-menu-overlay"
+  class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center"
+>
+  <button
+    type="button"
+    aria-label="close-menu"
+    class="absolute top-0 right-0 p-4"
+    onclick="toggleMobileMenu()"
+  >
+    <X class="h-8 md:h-10 w-auto" />
+  </button>
+  <MobileMenu t={t} />
+</div>
+
 <script is:inline>
+  function toggleMobileMenu() {
+    const overlay = document.getElementById("mobile-menu-overlay");
+    overlay.classList.toggle("hidden");
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     const header = document.getElementById("site-header");
     const sections = document.querySelectorAll(".light-bg, .dark-bg");
