@@ -6,6 +6,14 @@ import HeaderThemeWatcher from "../components/ObserverHeader";
 import "../styles/global.css";
 
 const { t } = Astro.props;
+
+const site = {
+  name: "Roldan Studio",
+  url: "https://jbroldan.dev/en",
+  logo: "https://jbroldan.dev/en/favicon.svg",
+  description:
+    "Portfolio of Javi Roldan — Web Developer & Designer focused on fast, accessible websites.",
+}
 ---
 
 <!doctype html>
@@ -21,6 +29,23 @@ const { t } = Astro.props;
     <link rel="alternate" hreflang="en" href="https://jbroldan.dev/en" />
     <link rel="alternate" hreflang="es" href="https://jbroldan.dev/es" />
     <link rel="alternate" hreflang="de" href="https://jbroldan.dev/de" />
+
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": site.name,
+        "url": site.url,
+        "description": site.description,
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Person",
+          "name": "Javi Roldan",
+          "url": "https://jbroldan.dev",
+          "image": site.logo,
+        },
+      })}
+    </script>
   </head>
   <body class="text-white">
     <Header t={t.header} />
