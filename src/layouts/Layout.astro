@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import ObserverProvider from "../components/ObserverProvider";
 import HeaderThemeWatcher from "../components/ObserverHeader";
 import "../styles/global.css";
+import { Schema } from "astro-seo-schema";
 
 const { t } = Astro.props;
 
@@ -30,22 +31,34 @@ const site = {
     <link rel="alternate" hreflang="es" href="https://jbroldan.dev/es" />
     <link rel="alternate" hreflang="de" href="https://jbroldan.dev/de" />
 
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": site.name,
-        "url": "https://jbroldan.dev/en",
-        "description": site.description,
-        "inLanguage": "en",
-        "publisher": {
-          "@type": "Person",
-          "name": "Javi Roldan",
-          "url": "https://jbroldan.dev",
-          "image": site.logo
-        }
-      })}
-    </script>
+    <Schema
+      item={{
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: 'Javi B. Roldan',
+        alternateName: 'Roldan Studio',
+        url: 'https://jbroldan.dev/en',
+        image: 'https://jbroldan.dev/favicon.svg',
+        jobTitle: 'Web Developer & Designer',
+        worksFor: {
+          '@type': 'Organization',
+          name: 'Roldan Studio',
+          url: 'https://jbroldan.dev'
+        },
+        sameAs: [
+          'https://github.com/dysk0zero',
+          'https://www.linkedin.com/in/jbroldan'
+        ],
+        knowsAbout: [
+          'Web Development',
+          'UI/UX Design',
+          'Astro',
+          'Performance Optimization',
+          'SEO'
+        ],
+        alumniOf: ['Physics']
+      }}
+    />
 
   </head>
   <body class="text-white">
