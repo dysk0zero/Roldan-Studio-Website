@@ -7,14 +7,6 @@ import "../styles/global.css";
 import { Schema } from "astro-seo-schema";
 
 const { t } = Astro.props;
-
-const site = {
-  name: "Roldan Studio",
-  url: "https://jbroldan.dev/en",
-  logo: "https://jbroldan.dev/favicon.svg",
-  description:
-    "Portfolio of Javi Roldan — Web Developer & Designer focused on fast, accessible websites.",
-}
 ---
 
 <!doctype html>
@@ -33,33 +25,34 @@ const site = {
 
     <Schema
       item={{
-        '@context': 'https://schema.org',
-        '@type': 'Person',
-        name: 'Javi B. Roldan',
-        alternateName: 'Roldan Studio',
-        url: 'https://jbroldan.dev/en',
-        image: 'https://jbroldan.dev/favicon.svg',
-        jobTitle: 'Web Developer & Designer',
-        worksFor: {
-          '@type': 'Organization',
-          name: 'Roldan Studio',
-          url: 'https://jbroldan.dev'
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Roldan Studio",
+        alternateName: "Javi B. Roldan",
+        url: "https://jbroldan.dev/en",
+        logo: "https://jbroldan.dev/favicon.svg",
+        founder: {
+          "@type": "Person",
+          name: "Javi B. Roldan",
+          jobTitle: "Web Developer & Designer",
+          sameAs: [
+            "https://github.com/dysk0zero",
+            "https://www.linkedin.com/in/jbroldan",
+          ],
         },
         sameAs: [
-          'https://github.com/dysk0zero',
-          'https://www.linkedin.com/in/jbroldan'
+          "https://github.com/dysk0zero",
+          "https://www.linkedin.com/in/jbroldan",
         ],
+        description:
+          "Roldan Studio is a web development and design studio by Javi B. Roldan, focused on high-performance websites, UI/UX design, and modern front-end technologies.",
         knowsAbout: [
-          'Web Development',
-          'UI/UX Design',
-          'Astro',
-          'Performance Optimization',
-          'SEO'
+          "Web Development",
+          "UI/UX Design",
+          "SEO",
         ],
-        alumniOf: ['Physics']
       }}
     />
-
   </head>
   <body class="text-white">
     <Header t={t.header} />
