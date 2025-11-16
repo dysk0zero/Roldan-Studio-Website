@@ -16,6 +16,8 @@ const { t } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg" href="/favicon.svg" />
     <title>{t.title}</title>
+    <meta property="og:site_name" content="Roldan Studio">
+    <meta name="application-name" content="Roldan Studio">
     <meta name="description" content={t.description} />
     <meta name="color-scheme" content="dark" />
     <link rel="canonical" href={t.url} />
@@ -40,10 +42,6 @@ const { t } = Astro.props;
             "https://www.linkedin.com/in/jbroldan",
           ],
         },
-        sameAs: [
-          "https://github.com/dysk0zero",
-          "https://www.linkedin.com/in/jbroldan",
-        ],
         description:
           "Roldan Studio is a web development and design studio by Javi B. Roldan, focused on high-performance websites, UI/UX design, and modern front-end technologies.",
         knowsAbout: [
