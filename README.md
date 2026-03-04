@@ -6,11 +6,9 @@
 [![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?logo=vercel&logoColor=white)](https://vercel.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-> **Technical Showcase**: A modern, high-performance portfolio website demonstrating advanced Astro implementation, internationalization, and modern web development practices.
+> **Summary**: A modern, high-performance website with advanced Astro implementation, internationalization, and modern web development practices.
 
-A modern, high-performance portfolio website built with Astro, featuring internationalization, smooth animations, and a clean design system. This project showcases advanced web development techniques and serves as a technical demonstration of modern frontend architecture.
-
-## 🚀 Tech Stack
+## Tech Stack
 
 - **Framework**: [Astro](https://astro.build) v5.13.7
 - **Styling**: [Tailwind CSS](https://tailwindcss.com) v4.1.13
@@ -20,37 +18,36 @@ A modern, high-performance portfolio website built with Astro, featuring interna
 - **Testing**: [Playwright](https://playwright.dev) v1.55.1
 - **Package Manager**: [pnpm](https://pnpm.io)
 
-## ✨ Key Features
+## Key Features
 
-### 🎯 Performance Optimizations
-- **Static Site Generation** with Astro's hybrid rendering
-- **Image Optimization** using Sharp for AVIF/WebP formats
-- **CSS-in-JS** with Tailwind CSS for minimal bundle size
-- **Motion One** for lightweight, performant animations
-- **Font Optimization** with custom font loading strategy
+### Performance Optimizations
+- **Static Site Generation**
+- **Image Optimization**
+- **CSS-in-JS**
+- **Motion One Animations**
+- **Font Optimization**
 
-### 🌍 Internationalization (i18n)
+### Internationalization (i18n)
 - **Multi-language Support**: English, Spanish, German
 - **Auto-detection** via browser language headers
 - **SEO-friendly** URL structure (`/en/`, `/es/`, `/de/`)
 - **Sitemap Integration** with localized URLs
 - **Language Toggle** component for user preference
 
-### 🎨 Design System
+### Design System
 - **Custom Color Palette** with semantic tokens
 - **Typography System** using Montserrat and JetBrains Mono
 - **Responsive Design** with mobile-first approach
 - **Glass Morphism** effects and smooth transitions
-- **Dark Mode** optimized color scheme
 
-### ⚡ Advanced Animations
+### Advanced Animations
 - **Intersection Observer** for scroll-triggered animations
 - **Smooth Page Transitions** with Motion One
 - **Hover Effects** with CSS transforms and filters
 - **Logo Shimmer** animation with mask effects
 - **Sticky Header** with dynamic color switching
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -140,7 +137,7 @@ pnpm show-report
 - SEO-optimized meta tags per locale
 - Language-specific sitemap entries
 
-## 🎯 Technical Highlights
+## Technical Highlights
 
 ### Performance
 - **Lighthouse Score**: 95+ across all metrics
@@ -160,7 +157,7 @@ pnpm show-report
 - **Sitemap** generation
 - **Open Graph** and Twitter Cards
 
-## 🚀 Deployment
+## Deployment
 
 The project is configured for deployment on Vercel with serverless functions:
 
@@ -173,18 +170,18 @@ pnpm build
 - No environment variables required for basic deployment
 - Configured for Vercel's serverless platform
 
-## 📈 Performance Metrics
+## Performance Metrics
 
 - **First Contentful Paint**: < 1.5s
 - **Largest Contentful Paint**: < 2.5s
 - **Cumulative Layout Shift**: < 0.1
 - **Time to Interactive**: < 3s
 
-## 🤝 Contributing
+## Contributing
 
 This is a personal portfolio project. For suggestions or issues, please open an issue in the repository.
 
-## 📄 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
