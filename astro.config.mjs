@@ -2,7 +2,6 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
 import react from "@astrojs/react";
-import purgecss from 'astro-purgecss';
 
 export default defineConfig({
   site: "https://jbroldan.dev",
@@ -16,7 +15,7 @@ export default defineConfig({
     },
   },
   middleware: false,
-  integrations: [sitemap(), react(), purgecss()],
+  integrations: [sitemap(), react()],
   vite: {
     plugins: [tailwindcss()],
     server: {
